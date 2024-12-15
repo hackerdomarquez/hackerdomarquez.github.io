@@ -8,16 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
             background-color: #ffffff00;
         }
-
         .hJxlOV video {
     width: 100%;
     min-height: 268px;
@@ -37,7 +34,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .spinner {
     border: 8px solid #222;
     border-radius: 50%;
@@ -47,29 +43,24 @@
     animation: spin 1s linear infinite;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
 }
-
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
-
             100% {
                 transform: rotate(360deg);
             }
         }
-
         #image-container img {
             max-width: 100%;
             height: auto;
         }
-
         .feedback-hidden {
     display: none;
     color: #ffffff;
     font-family: 'M PLUS 1 Code', monospace;
     margin-top: 10px;
 }
-
 #hack-feedback {
     font-size: 14px;
     text-align: center;
@@ -81,7 +72,6 @@
     width: 100%;
     display: none; 
 }
-
 .context-options {
     position: fixed;
     top: 50%;
@@ -95,7 +85,6 @@
     z-index: 10000;
     overflow: hidden;
 }
-
 .context-options .background-video {
     position: absolute;
     top: 0;
@@ -105,12 +94,10 @@
     object-fit: cover;
     z-index: -1;
 }
-
 .context-options * {
     position: relative;
     z-index: 1;
 }
-
 .context-options img {
     width: 80px;
     margin: 4px auto 8px;
@@ -118,38 +105,30 @@
     TOP: 7PX;
     POSITION: RELATIVE;
 }
-
-
 .context-options .bot-title {
-    font-size: 14px;
+    font-size: 19px;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
     top: -10px;
-}
-
-.context-options .context-option {
-    font-size: 14px;
+    margin: 127px auto 20px;
     display: block;
-    padding: 11px 22px;
+    TOP: -136PX;
+    POSITION: RELATIVE;
+}
+.context-options .context-option {
+    font-size: 19px;
+    display: block;
+    padding: 9px 31px;
     margin-bottom: 8px;
-    background-color: rgb(255 255 255);
-    border-radius: 6px;
-    color: #000000;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ff0000;
+    border-radius: 7px;
+    color: #ff0000;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s;
-}
-
-.context-options .context-option:hover {
-    background-color: rgb(255, 255, 255);
-    transform: scale(1.05);
-}
-
-.context-options .closeContextOptions:hover {
-    background-color: rgb(255 0 0 / 80%);
-
 }
         .dev-by {
             font-size: 14px;
@@ -157,7 +136,6 @@
             color: #00ff3d;
             margin-top: 20px;
         }
-
         html, body {
         margin: 0;
         padding: 0;
@@ -165,19 +143,18 @@
         overflow-y: auto; 
         height: 100%; 
     }
-
     .login-wrapper {
-    display: flex;
+    display: flex
+;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 39px;
+    top: 557px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
-
     .custom-container {
     text-align: center;
     max-width: 388px;
@@ -187,17 +164,14 @@
     border-radius: 23px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
-
         .login-intro-img {
             max-width: 100%;
             height: auto;
             margin-bottom: 7px;
         }
-
         .register-form h6 {
             color: #ffffff;
         }
-
         .register-form p {
             color: rgb(255, 255, 255);
         }
@@ -205,7 +179,6 @@
     position: relative;
     margin-bottom: 30px;
 }
-
 .form-control {
     background-color: #000; 
     border: 2px solid #686868; 
@@ -216,19 +189,15 @@
     font-size: 16px;
     box-shadow: 0 0 10px rgba(0, 255, 68, 0); 
 }
-
 .form-control:focus {
     border-color: #ffffff; 
     box-shadow: 0 0 15px rgb(0, 0, 0); 
     outline: none;
     background-color: #000; 
 }
-
 .form-control::placeholder {
     color: rgb(247, 247, 247); 
 }
-
-
 .btn-primary2 {
             background-color: #000000;
             border: 2px solid #00ff37;
@@ -300,55 +269,41 @@
         }
 .social-icons a.instagram {
     color: #C13584; 
-
 }
-
 .social-icons a.instagram:hover {
     color: #e1306c; 
     text-shadow: 0 0 15px rgba(225, 48, 108, 0.8);
 }
-
 .social-icons a.telegram {
     color: #0088cc; 
-
 }
-
 .social-icons a.telegram:hover {
     color: #00acee; 
     text-shadow: 0 0 15px rgba(0, 172, 238, 0.8);
 }
-
 .social-icons a.whatsapp {
     color: #25D366; 
-
 }
-
 .social-icons a.whatsapp:hover {
     color: #128C7E; 
     text-shadow: 0 0 15px rgba(18, 140, 126, 0.8);
 }
-
-
 .social-icons {
     margin-top: 20px;
     text-align: center;
 }
-
 .social-icons a {
     color: #ffffff;
     font-size: 2.5rem;
     margin: 0 15px;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
-
 }
 .social-icons a:hover {
     color: #ff0000; 
     transform: scale(1.2); 
     text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); 
 }
-
-
 .social-icons a::after {
     content: '';
     position: absolute;
@@ -361,13 +316,11 @@
     transform-origin: right;
     transition: transform 0.4s ease, background-color 0.4s ease;
 }
-
 .social-icons a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
     background-color: #ff0000; 
 }
-
 .social-icons a:hover::before {
     content: '';
     position: absolute;
@@ -380,11 +333,9 @@
     transform: translateX(-50%) scale(0);
     transition: transform 0.4s ease;
 }
-
 .social-icons a:hover::before {
     transform: translateX(-50%) scale(1);
 }
-
 #iframe-container {
     display: none;
     width: 100vw;
@@ -394,7 +345,6 @@
     left: -12px;
     z-index: 9999;
 }
-
     iframe {
         width: 100vw; 
         height: 150vh;
@@ -408,14 +358,11 @@
     height: 100%;
     width: 100%;
 }
-
         .grid-item {
             background-color: #00000000;
             border: 6px solid #00000000;
         }
-
   
-
         #draggable-image img {
     width: 79px;
     top: 0px;
@@ -423,17 +370,14 @@
     height: auto;
     position: fixed;
 }
-
         .black-background {
             display: none;
         }
         
       
-
 .loading-hidden {
     display: none; 
 }
-
 .loading-visible {
     display: flex; 
     align-items: center;
@@ -458,13 +402,11 @@
             z-index: 0;
             overflow: hidden;
         }
-
         video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .controls {
             position: absolute;
             top: 20px;
@@ -474,14 +416,9 @@
         .student-count {
     display: block; 
 }
-
 .mt-3 {
     margin-top: 20px;
 }
-
-
-
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
@@ -490,7 +427,6 @@
     max-width: 100%;
     background: #000; 
 }
-
 .video-container video {
     position: absolute;
     top: 0;
@@ -522,7 +458,6 @@ a.anchorjs-link {
     z-index: 9999;
     overflow: hidden;
 }
-
 .loading-overlay::before {
     content: "";
     position: absolute;
@@ -533,7 +468,6 @@ a.anchorjs-link {
     background-color: green;
     animation: moveUpDown 2s ease-in-out infinite;
 }
-
 /* Animação para o movimento do risco (subindo e descendo) */
 @keyframes moveUpDown {
     0% {
@@ -566,14 +500,32 @@ a.anchorjs-link {
     height: 100%;
     width: 100%;
 }
-
 .grid-item {
     background-color: #ffffff00;
     border: 6px solid #00000000;
 }
+.user-online-counter {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #ffffff;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    z-index: 1000;
+}
+.user-online-counter i {
+    margin-right: 8px;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
     </style>
 </head>
-
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
@@ -582,19 +534,15 @@ a.anchorjs-link {
         </video>
       </div>
       
-
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
-                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">1000 ALUNOS</span> 
-                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
-                </p>
-                
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
-            </div>
             
+                <div id="user-online-counter" class="user-online-counter">
+                    <i class="bi bi-people-fill"></i>
+                    <span id="online-users">0</span>
+                </div>
+                
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
@@ -613,7 +561,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/mines')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -630,28 +578,22 @@ a.anchorjs-link {
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 <div id="loading-overlay" class="loading-overlay"></div>
-
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
-<img src="https://i.ibb.co/fpv7pmf/anonymous-8291223-1280.png" alt="Hacker"></div>
-
+<img src="https://i.ibb.co/n6Xxprc/image-removebg-preview.png" alt="Hacker"></div>
 <div class="context-options" id="contextOptions">
     <video autoplay muted loop class="background-video" playsinline>
         <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
-    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+    
     <div id="result"></div>
     <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
     <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
-</div>
-
-
                               
-
         
 <div id="image-container"></div>
 <div id="assertividade" class="assertivity-hidden"></div>
@@ -687,19 +629,39 @@ a.anchorjs-link {
         <div class="grid-item"></div>
         <div class="grid-item"></div>
         
-
 </div>                 
     <script>
-
+    // Função para abrir o contexto ao dar dois cliques
+    function openContextOptions() {
+        const contextOptions = document.getElementById('contextOptions');
+        contextOptions.style.display = 'block'; // Mostra o elemento
+    }
+    // Adiciona o evento de dois cliques para mouse
+    document.addEventListener('dblclick', (event) => {
+        const target = event.target;
+        if (target.closest('.background-video') || target.closest('.context-options')) {
+            openContextOptions();
+        }
+    });
+    // Adiciona suporte para toque duplo em dispositivos móveis
+    let lastTouchTime = 0;
+    document.addEventListener('touchstart', (event) => {
+        const currentTime = new Date().getTime();
+        const timeSinceLastTouch = currentTime - lastTouchTime;
+        if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
+            const target = event.target;
+            if (target.closest('.background-video') || target.closest('.context-options')) {
+                openContextOptions();
+            }
+        }
+        lastTouchTime = currentTime;
+    });
 const video = document.querySelector('.background-video');
 video.addEventListener('ended', () => {
     video.play(); // Força o replay caso o loop falhe
 });
-
-
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');
-
             // Tenta reproduzir o vídeo quando a página é carregada
             video.play().then(() => {
                 // Sucesso, o vídeo está sendo reproduzido
@@ -711,7 +673,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO3200') {
+    if (password === 'HACKER33') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -722,37 +684,30 @@ document.addEventListener('DOMContentLoaded', function () {
         alert('Senha incorreta. Tente novamente.');
     }
 }
-
-
 function closeContextOptions() { 
     const loadingAnimation = document.getElementById('loading-animation');
     const contextOptions = document.getElementById('contextOptions');
     const loadingOverlay = document.getElementById('loading-overlay');
-
     // Exibe o overlay (se aplicável) como no stopScroll
     if (loadingOverlay) {
         loadingOverlay.style.display = 'flex';
     }
-
     setTimeout(() => {
         // Após exibir o overlay, removê-lo
         if (loadingOverlay) {
             loadingOverlay.style.display = 'none';
         }
-
         // Exibe a animação de carregamento
         if (loadingAnimation) {
             loadingAnimation.classList.remove('loading-hidden');
             loadingAnimation.classList.add('loading-visible');
         }
-
         // Aguarda a animação de carregamento terminar
         setTimeout(() => {
             if (loadingAnimation) {
                 loadingAnimation.classList.remove('loading-visible');
                 loadingAnimation.classList.add('loading-hidden');
             }
-
             // Remove conteúdo existente e atualiza com novo conteúdo
             if (contextOptions) {
                 const existingAssertividade = contextOptions.querySelector('.assertividade');
@@ -760,33 +715,22 @@ function closeContextOptions() {
                 
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
-
-               // Gerar assertividade entre 1% e 100%
-const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
-const assertividade = `${assertividadeValue}%`;
-
-const assertividadeElement = document.createElement('div');
-assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-assertividadeElement.className = 'assertividade';
-assertividadeElement.style.fontSize = '18px';
-assertividadeElement.style.marginBottom = '10px';
-
-// Alterar a cor com base na assertividade
-if (parseFloat(assertividadeValue) >= 90) {
-    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
-} else {
-    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
-}
-
-contextOptions.appendChild(assertividadeElement);
-
+                // Gera assertividade entre 90% e 100%
+                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
+                const assertividade = `${assertividadeValue}%`;
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green'; // Sempre verde
+                contextOptions.appendChild(assertividadeElement);
                 // Lista de URLs de imagens
                 const imageUrls = [
                     'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
                     'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
                     'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
                 ];
-
                 const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
                 const imageElement = document.createElement('img');
                 imageElement.src = imageUrl;
@@ -794,9 +738,7 @@ contextOptions.appendChild(assertividadeElement);
                 imageElement.style.width = '100px';
                 imageElement.style.height = 'auto';
                 imageElement.className = 'random-image';
-
                 contextOptions.appendChild(imageElement);
-
                 // Remove conteúdo após 7 segundos
                 setTimeout(() => {
                     if (contextOptions) {
@@ -807,12 +749,40 @@ contextOptions.appendChild(assertividadeElement);
                     }
                 }, 7000);
             }
-        }, 1000);
+        }, 3000);
     }, 4000);
 }
-
-
-
+// Configurações para gerar o número inicial e mantê-lo dinâmico
+let currentUsers = generateRandomUsers(125, 250);
+let incrementStep = 1; // Quantidade de incremento ou decremento
+// Função para gerar um número aleatório inicial entre 125 e 250
+function generateRandomUsers(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// Função para atualizar o contador dinamicamente
+function updateDynamicUsers() {
+    const onlineUsers = document.getElementById('online-users');
+    // Decidir aleatoriamente se aumenta ou diminui
+    const direction = Math.random() < 0.5 ? -1 : 1;
+    currentUsers += direction * incrementStep;
+    // Limitar os usuários dentro de um intervalo para evitar números fora de contexto
+    if (currentUsers < 125) currentUsers = 125;
+    if (currentUsers > 250) currentUsers = 250;
+    // Atualizar o conteúdo do contador
+    onlineUsers.textContent = currentUsers;
+}
+// Função para simular a mudança de número ao recarregar a página
+function resetUsersAfterReload() {
+    currentUsers = generateRandomUsers(currentUsers - 10, currentUsers + 10); // Intervalo mais próximo
+    if (currentUsers < 125) currentUsers = 125; // Respeita o limite mínimo
+    if (currentUsers > 250) currentUsers = 250; // Respeita o limite máximo
+    document.getElementById('online-users').textContent = currentUsers;
+}
+// Inicializar o contador com um número aleatório
+window.onload = function () {
+    resetUsersAfterReload();
+    setInterval(updateDynamicUsers, 3000); // Atualiza a cada 3 segundos
+};
 function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
@@ -830,7 +800,6 @@ function toggleContextOptions() {
     if (loadingOverlay) {
         loadingOverlay.style.display = 'flex'; // Torna o overlay visível
     }
-
     // A animação do "sniper" vai durar 2 segundos para cada ciclo de movimento
     // Aqui vamos fazer a animação durar 4 segundos para ser repetida 2 vezes (com efeito completo)
     setTimeout(() => {
@@ -838,14 +807,12 @@ function toggleContextOptions() {
         if (loadingOverlay) {
             loadingOverlay.style.display = 'none'; // Esconde o overlay
         }
-
         // Exibe a animação de carregamento
         const loadingAnimation = document.getElementById('loading-animation');
         if (loadingAnimation) {
             loadingAnimation.classList.remove('loading-hidden');
             loadingAnimation.classList.add('loading-visible');
         }
-
         // Aguarda a animação de carregamento terminar (por exemplo, 1 segundo)
         setTimeout(() => {
             if (loadingAnimation) {
@@ -853,20 +820,16 @@ function toggleContextOptions() {
                 loadingAnimation.classList.remove('loading-visible');
                 loadingAnimation.classList.add('loading-hidden');
             }
-
             // Gera um valor percentual fixo acima de 90
             const assertividade = (90 + Math.random() * 10).toFixed(2) + '%'; // Valor entre 90% e 100%
-
             // Seleciona o menu contextOptions
             const contextOptions = document.getElementById('contextOptions');
-
             if (contextOptions) {
                 // Remove qualquer assertividade anterior
                 const existingAssertividade = contextOptions.querySelector('.assertividade');
                 if (existingAssertividade) {
                     contextOptions.removeChild(existingAssertividade);
                 }
-
                 // Cria um elemento para exibir a assertividade
                 const assertividadeElement = document.createElement('div');
                 assertividadeElement.textContent = `Assertividade: ${assertividade}`;
@@ -874,10 +837,8 @@ function toggleContextOptions() {
                 assertividadeElement.style.fontSize = '14px';
                 assertividadeElement.style.marginBottom = '0px';
                 assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
-
                 // Adiciona a assertividade ao menu contextOptions
                 contextOptions.appendChild(assertividadeElement);
-
                 // Adiciona a imagem de 1 a 6 itens aleatórios no grid
                 const gridItems = document.querySelectorAll('.grid-item');
                 gridItems.forEach(item => item.innerHTML = ''); // Limpa o conteúdo atual
@@ -888,7 +849,6 @@ function toggleContextOptions() {
                 const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
                 itemsToChange.forEach(item => item.innerHTML += imageElement);
             }
-
             // Aguarda 5 segundos e então reverte as mudanças
             setTimeout(() => {
                 if (contextOptions) {
@@ -897,7 +857,6 @@ function toggleContextOptions() {
                     if (assertividadeElement) { 
                         contextOptions.removeChild(assertividadeElement);
                     }
-
                     // Remove as imagens dos itens do grid
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
@@ -906,7 +865,4 @@ function toggleContextOptions() {
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
     }, 8000); // Tempo de espera para a animação do "sniper" (4 segundos)
 }
-
-
-
     </script>
