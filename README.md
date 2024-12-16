@@ -213,23 +213,18 @@ iframe {
             }
         }
 
-        @media (max-width: 768px) {
-            .login-wrapper {
-                display: flex
-;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
-        top: -50px;
-        left: 0;
-        z-index: 1;
+        .login-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 154vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    z-index: 1;
     }
-
            
-        }
-
+        
         #blackMenu {
             display: none;
             position: absolute;
