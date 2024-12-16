@@ -15,7 +15,11 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
-       
+        iframe {
+            border: none; /* Remove bordas do iframe */
+            width: 100vw; /* Ocupa toda a largura da tela */
+            height: 100vh; /* Ocupa toda a altura da tela */
+        }
 
 .loading-hidden {
     display: none;
