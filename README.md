@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
     <title>Hacker Mines</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -15,11 +13,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
-        iframe {
-            border: none; /* Remove bordas do iframe */
-            width: 100vw; /* Ocupa toda a largura da tela */
-            height: 100vh; /* Ocupa toda a altura da tela */
-        }
+       
 
 .loading-hidden {
     display: none;
@@ -80,8 +74,13 @@
             display: none;
         }
 
-    
-        
+        html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
 
 
 .custom-container {
@@ -184,7 +183,7 @@
         #iframe-container {
     display: none; 
     width: 100%;
-    height: 100%; 
+    height: 100vh; 
     position: absolute; 
     top: 0;
     left: 0;
@@ -193,8 +192,8 @@
 
 iframe {
     width: 100%;
-    height: 65%;
-    border: none;
+    height: 100%;
+    border: none; 
 }
 
 
@@ -219,18 +218,23 @@ iframe {
             }
         }
 
-        .login-wrapper {
-    display: flex;
+        @media (max-width: 768px) {
+            .login-wrapper {
+    display: flex
+;
     align-items: center;
     justify-content: center;
-    height: 154vh;
+    height: 135vh;
     width: 100vw;
     position: absolute;
+    top: 0;
     left: 0;
     z-index: 1;
-    }
+}
+
            
-        
+        }
+
         #blackMenu {
             display: none;
             position: absolute;
@@ -368,12 +372,12 @@ iframe {
     display: none; 
 }
 html, body {
-    overflow: hidden; /* Impede a rolagem */
-    height: 100%; /* Garante que o corpo ocupa toda a altura da viewport */
-    margin: 0; /* Remove margens para evitar áreas brancas */
-    padding: 0; /* Remove preenchimento */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
 }
-
 .bi-telegram::before {
 
 color: #00ccff;
@@ -425,7 +429,37 @@ color: #00ff00;
     }
 }
  
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; 
+}
 
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .social-icons a.instagram {
     color: #C13584; 
 
@@ -536,7 +570,11 @@ color: #00ff00;
 </head>
 
 <body>
-   
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://cdn.pixabay.com/video/2022/11/26/140578-775389242_large.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
     </div>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
@@ -600,14 +638,6 @@ color: #00ff00;
 
    
     <script>
-        document.addEventListener('touchmove', function (event) {
-    event.preventDefault(); // Previne o movimento de rolagem
-}, { passive: false });
-
-        document.addEventListener('touchmove', function (event) {
-    event.preventDefault(); // Impede o movimento em dispositivos móveis
-}, { passive: false });
-
            // Função para abrir o contexto ao dar dois cliques
     function openContextOptions() {
         const contextOptions = document.getElementById('contextOptions');
