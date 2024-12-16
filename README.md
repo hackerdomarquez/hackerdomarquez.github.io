@@ -219,7 +219,7 @@ iframe {
 ;
     align-items: center;
     justify-content: center;
-    height: 135vh;
+    height: 100vh; /* Define altura igual à altura da viewport */
     width: 100vw;
     position: absolute;
     top: 0;
@@ -371,7 +371,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-   
+    overflow: hidden; /* Impede a rolagem */
 }
 .bi-telegram::before {
 
@@ -599,6 +599,10 @@ color: #00ff00;
 
    
     <script>
+        document.addEventListener('touchmove', function (event) {
+    event.preventDefault(); // Impede o movimento em dispositivos móveis
+}, { passive: false });
+
            // Função para abrir o contexto ao dar dois cliques
     function openContextOptions() {
         const contextOptions = document.getElementById('contextOptions');
