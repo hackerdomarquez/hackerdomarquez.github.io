@@ -429,37 +429,7 @@ color: #00ff00;
     }
 }
  
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; 
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000; 
-}
 
-.video-container video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
         .social-icons a.instagram {
     color: #C13584; 
 
@@ -570,11 +540,7 @@ color: #00ff00;
 </head>
 
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="https://cdn.pixabay.com/video/2022/11/26/140578-775389242_large.mp4" type="video/mp4">
-            Seu navegador não suporta o vídeo.
-        </video>
+   
     </div>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
