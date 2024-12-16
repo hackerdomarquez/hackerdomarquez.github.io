@@ -192,7 +192,7 @@
 
 iframe {
     width: 100%;
-    height: 74%;
+    height: 50%;
     border: none;
 }
 
