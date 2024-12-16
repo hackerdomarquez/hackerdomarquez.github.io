@@ -74,13 +74,8 @@
             display: none;
         }
 
-        html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden; 
-}
+    
+        
 
 
 .custom-container {
@@ -376,7 +371,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; 
+   
 }
 .bi-telegram::before {
 
