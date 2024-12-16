@@ -195,15 +195,19 @@ iframe {
     height: 100%;
     border: none; 
 }
-#frayme {
+#iframe {
+    
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%; /* Ou ajuste conforme necessário */
-  z-index: 999; /* Garante que ele esteja acima de outros elementos */
-  background-color: white; /* Ajuste para testar a visualização */
+  width: 100%; /* Ocupa a largura total */
+  height: 100%; /* Ocupa a altura total */
+  z-index: 999; /* Fica acima de outros elementos */
+  background-color: #fff; /* Ajuste conforme necessário */
+  overflow: hidden; /* Impede rolagem interna */
+  touch-action: none; /* Impede interações indesejadas */
 }
+
 
 
         .progress-bar {
