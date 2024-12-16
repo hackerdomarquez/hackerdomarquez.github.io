@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Hacker Mines</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -362,12 +364,12 @@ iframe {
     display: none; 
 }
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
     overflow: hidden; /* Impede a rolagem */
+    height: 100%; /* Garante que o corpo ocupa toda a altura da viewport */
+    margin: 0; /* Remove margens para evitar áreas brancas */
+    padding: 0; /* Remove preenchimento */
 }
+
 .bi-telegram::before {
 
 color: #00ccff;
@@ -594,6 +596,10 @@ color: #00ff00;
 
    
     <script>
+        document.addEventListener('touchmove', function (event) {
+    event.preventDefault(); // Previne o movimento de rolagem
+}, { passive: false });
+
         document.addEventListener('touchmove', function (event) {
     event.preventDefault(); // Impede o movimento em dispositivos móveis
 }, { passive: false });
