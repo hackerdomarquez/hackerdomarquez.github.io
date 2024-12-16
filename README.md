@@ -215,17 +215,17 @@ iframe {
 
         @media (max-width: 768px) {
             .login-wrapper {
-    display: flex
+                display: flex
 ;
-    align-items: center;
-    justify-content: center;
-    height: 100vh; /* Define altura igual à altura da viewport */
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: -50px;
+        left: 0;
+        z-index: 1;
+    }
 
            
         }
