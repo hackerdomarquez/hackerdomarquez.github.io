@@ -184,7 +184,6 @@
         overflow-y: auto; 
         height: 100%; 
     }
-
     .login-wrapper {
     display: flex
 ;
@@ -193,7 +192,7 @@
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 557px;
+    top: 364px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -590,6 +589,39 @@ a.anchorjs-link {
     background-color: #ffffff00;
     border: 6px solid #00000000;
 }
+#modoAutomatico {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+#modoAutomatico.ativo {
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#modoAutomatico.desativado {
+    background: linear-gradient(45deg, #d32f2f, #000000); /* Cor desativada */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#modoAutomatico:hover {
+    transform: scale(1.05); /* Leve aumento no tamanho */
+}
+
+#modoAutomatico:active {
+    transform: scale(0.95); /* Leve redução no tamanho */
+}
+
     </style>
 </head>
 
@@ -655,8 +687,7 @@ a.anchorjs-link {
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
     
     <div id="result"></div>
-    <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
-    <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
+    
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
@@ -739,20 +770,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
+
         let modoAutomaticoAtivado = false;
 let intervaloMudarIframe;
 
 function toggleModoAutomatico() {
     const botao = document.getElementById('modoAutomatico');
 
-    if (botao.classList.contains('ativo')) {
+    if (modoAutomaticoAtivado) {
+        // Desativa o modo automático
         botao.classList.remove('ativo');
         botao.classList.add('desativado');
+        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO DESATIVADO';
         modoAutomaticoAtivado = false;
         clearInterval(intervaloMudarIframe); // Para a troca automática
     } else {
+        // Ativa o modo automático
         botao.classList.remove('desativado');
         botao.classList.add('ativo');
+        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO ATIVO';
         modoAutomaticoAtivado = true;
         iniciarModoAutomatico(); // Inicia a troca automática
     }
@@ -782,7 +818,7 @@ function iniciarModoAutomatico() {
         } else {
             clearInterval(intervaloMudarIframe); // Para o intervalo se o modo automático for desativado
         }
-    }, 15000); // Altera a cada 5 segundos
+    }, 15000); // Altera a cada 15 segundos
 }
 
 function closeContextOptions() {
@@ -806,6 +842,7 @@ function login(url) {
         alert('Senha incorreta. Tente novamente.');
     }
 }
+
 
 
 function closeContextOptions() { 
