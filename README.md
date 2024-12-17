@@ -121,36 +121,55 @@
 
 
 .context-options .bot-title {
-    font-size: 14px;
+    font-size: 19px;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
     top: -10px;
+    /* width: 31px; */
+    margin: 91px auto 20px;
+    display: block;
+    TOP: -103PX;
+    POSITION: RELATIVE;
 }
 
 .context-options .context-option {
-    font-size: 14px;
+    font-size: 19px;
     display: block;
-    padding: 11px 22px;
+    padding: 12px 19px;
     margin-bottom: 8px;
-    background-color: rgb(255 255 255);
-    border-radius: 6px;
-    color: #000000;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: -3px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.context-options .context-option {
+    font-size: 19px;
+    display: block;
+    padding: 12px 19px;
+    margin-bottom: 8px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: -3px;
+    color: #ffffff;
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, transform 0.1s;
 }
 
-.context-options .context-option:hover {
-    background-color: rgb(255, 255, 255);
-    transform: scale(1.05);
+.context-options .context-option.ativo {
+    background-color: green;
 }
 
-.context-options .closeContextOptions:hover {
-    background-color: rgb(255 0 0 / 80%);
-
+.context-options .context-option.desativado {
+    background-color: red;
 }
+
+
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -167,17 +186,17 @@
     }
 
     .login-wrapper {
-    display: flex;
+    display: flex
+;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 39px;
+    top: 557px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
-
     .custom-container {
     text-align: center;
     max-width: 388px;
@@ -586,15 +605,9 @@ a.anchorjs-link {
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
-                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
-                    <span style="font-weight: bold;">1000 ALUNOS</span> 
-                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
-                </p>
-                
-                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
-            </div>
             
+                
+          
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
@@ -613,7 +626,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/mines')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -640,23 +653,23 @@ a.anchorjs-link {
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
-    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
+    
     <div id="result"></div>
     <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
     <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
+    
+    <!-- Novo botão MODO AUTOMÁTICO -->
+    <span id="modoAutomatico" class="context-option" onclick="toggleModoAutomatico();">
+        <i class="fa fa-robot" aria-hidden="true"></i> MODO AUTOMÁTICO
+    </span>
+
+    <div id="image-container"></div>
+    <div id="assertividade" class="assertivity-hidden"></div>
 </div>
 
-
-                              
-
-        
-<div id="image-container"></div>
-<div id="assertividade" class="assertivity-hidden"></div>
-                        
-</div>
                                     
 <div class="white-square">
     <div class="grid-container">
@@ -690,7 +703,24 @@ a.anchorjs-link {
 
 </div>                 
     <script>
+        
 
+    // Adiciona suporte para toque duplo em dispositivos móveis
+    let lastTouchTime = 0;
+
+    document.addEventListener('touchstart', (event) => {
+        const currentTime = new Date().getTime();
+        const timeSinceLastTouch = currentTime - lastTouchTime;
+
+        if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
+            const target = event.target;
+            if (target.closest('.background-video') || target.closest('.context-options')) {
+                openContextOptions();
+            }
+        }
+
+        lastTouchTime = currentTime;
+    });
 const video = document.querySelector('.background-video');
 video.addEventListener('ended', () => {
     video.play(); // Força o replay caso o loop falhe
@@ -709,9 +739,63 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
-        function login(url) {
+        let modoAutomaticoAtivado = false;
+let intervaloMudarIframe;
+
+function toggleModoAutomatico() {
+    const botao = document.getElementById('modoAutomatico');
+
+    if (botao.classList.contains('ativo')) {
+        botao.classList.remove('ativo');
+        botao.classList.add('desativado');
+        modoAutomaticoAtivado = false;
+        clearInterval(intervaloMudarIframe); // Para a troca automática
+    } else {
+        botao.classList.remove('desativado');
+        botao.classList.add('ativo');
+        modoAutomaticoAtivado = true;
+        iniciarModoAutomatico(); // Inicia a troca automática
+    }
+}
+
+function iniciarModoAutomatico() {
+    let urls = [
+        'https://blaze1.space/pt/games/double',
+        'https://blaze1.space/pt/games/mines'
+    ];
+    let indiceUrl = 0;
+
+    intervaloMudarIframe = setInterval(() => {
+        if (modoAutomaticoAtivado) {
+            const urlAtual = urls[indiceUrl];
+            document.getElementById('login-iframe').src = urlAtual;
+
+            if (urlAtual === 'https://blaze1.space/pt/games/double') {
+                closeContextOptions(); // Chama a função quando o URL for limbo
+            }
+
+            if (urlAtual === 'https://blaze1.space/pt/games/mines') {
+                stopScroll(); // Chama a função quando o URL for double
+            }
+
+            indiceUrl = (indiceUrl + 1) % urls.length; // Alterna entre os dois URLs
+        } else {
+            clearInterval(intervaloMudarIframe); // Para o intervalo se o modo automático for desativado
+        }
+    }, 15000); // Altera a cada 5 segundos
+}
+
+function closeContextOptions() {
+    document.getElementById('contextOptions').style.display = 'none'; // Fechar as opções
+}
+
+function stopScroll() {
+    document.body.style.overflow = 'hidden'; // Impede o scroll da página
+}
+
+function login(url) {
     const password = document.getElementById('password').value;
-    if (password === 'ALUNO301') {
+    if (password === 'ALUNO101') {
         document.getElementById('loading-message').style.display = 'block';
         setTimeout(() => {
             document.getElementById('login-iframe').src = url;
@@ -761,24 +845,18 @@ function closeContextOptions() {
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
 
-               // Gerar assertividade entre 1% e 100%
-const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
-const assertividade = `${assertividadeValue}%`;
+                // Gera assertividade entre 90% e 100%
+                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
+                const assertividade = `${assertividadeValue}%`;
 
-const assertividadeElement = document.createElement('div');
-assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-assertividadeElement.className = 'assertividade';
-assertividadeElement.style.fontSize = '18px';
-assertividadeElement.style.marginBottom = '10px';
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green'; // Sempre verde
 
-// Alterar a cor com base na assertividade
-if (parseFloat(assertividadeValue) >= 90) {
-    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
-} else {
-    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
-}
-
-contextOptions.appendChild(assertividadeElement);
+                contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
                 const imageUrls = [
@@ -807,7 +885,7 @@ contextOptions.appendChild(assertividadeElement);
                     }
                 }, 7000);
             }
-        }, 1000);
+        }, 3000);
     }, 4000);
 }
 
