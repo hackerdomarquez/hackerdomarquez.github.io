@@ -105,7 +105,7 @@
 ;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px;
+    padding: 10px 20px;
     border-radius: 30px;
     font-size: 12px;
     font-weight: bold;
@@ -615,13 +615,14 @@ a.anchorjs-link {
     transform: scale(0.95); /* Leve redução no tamanho */
 }
 .context-option.hack-mines {
-    background: linear-gradient(45deg, #000000, #ff0000);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .context-option.hack-mines:hover {
     transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg,#388e3c, #66bb6a); /* Efeito de hover */
+    background: linear-gradient(45deg,#ff0000, #000000); /* Efeito de hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -631,13 +632,13 @@ a.anchorjs-link {
 }
 
 .context-option.hack-double {
-    background: linear-gradient(45deg, #ff0000, #000000);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .context-option.hack-double:hover {
     transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg, #388e3c, #66bb6a); /* Efeito de hover */
+    background: linear-gradient(45deg, #ff0000, #000000); /* Efeito de hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -926,9 +927,10 @@ function closeContextOptions() {
                 assertividadeElement.textContent = `Assertividade: ${assertividade}`;
                 assertividadeElement.className = 'assertividade';
                 assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.marginBottom = '-37px';
                 assertividadeElement.style.color = 'green'; // Sempre verde
-
+                assertividadeElement.style.position = 'relative'; // Adicione position para que o "top" funcione
+                assertividadeElement.style.top = '-15px'; // Adiciona o deslocamento desejado
                 contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
@@ -942,10 +944,11 @@ function closeContextOptions() {
                 const imageElement = document.createElement('img');
                 imageElement.src = imageUrl;
                 imageElement.alt = 'Random Image';
-                imageElement.style.width = '100px';
+                imageElement.style.width = '90px';
                 imageElement.style.height = 'auto';
                 imageElement.className = 'random-image';
-
+                imageElement.style.position = 'relative';
+                imageElement.style.top = '-25px';
                 contextOptions.appendChild(imageElement);
 
                 // Remove conteúdo após 7 segundos
@@ -956,7 +959,7 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 7000);
+                }, 70300);
             }
         }, 3000);
     }, 4000);
