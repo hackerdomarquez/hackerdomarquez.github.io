@@ -147,7 +147,7 @@
     top: -9px;
     margin: 37px auto 20px;
     display: block;
-    TOP: -46PX;
+    TOP: -39PX;
     POSITION: RELATIVE;
 }
 
@@ -558,28 +558,29 @@ a.anchorjs-link {
 }
  
 .white-square {
-    width: 352px;
-    height: 408px;
-    border: 2px solid #ff000000;
+    width: 593px;
+    height: 646px;
+    background-color: #ffffff00;
+    border: 2px solid #00000000;
     position: absolute;
-    top: 47px;
-    left: 19px;
+    top: 36PX;
+    left: 108PX;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 64px);
-    grid-template-rows: repeat(5, 71px);
-    gap: 6px;
+    grid-template-columns: repeat(5, 95px);
+    grid-template-rows: repeat(5, 101px);
+    gap: 21px;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00;
-    border: 6px solid #00000000;
+    border: 7px solid #00000000;
 }
 #modoAutomatico {
     display: inline-flex
