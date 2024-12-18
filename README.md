@@ -84,16 +84,37 @@
 
 .context-options {
     position: fixed;
-    top: 50%;
+    top: 51%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 7px;
+    border-radius: 11px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
     z-index: 10000;
     overflow: hidden;
+    display: flex
+;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.context-options .context-option {
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 0px;
+    border-radius: 26px;
+    font-size: 17px;
+    font-weight: bold;
+    left: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    width: 200px;
+    box-sizing: border-box;
 }
 
 .context-options .background-video {
@@ -126,40 +147,14 @@
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
-    top: -10px;
-    /* width: 31px; */
-    margin: 91px auto 20px;
+    top: -9px;
+    margin: 37px auto 20px;
     display: block;
-    TOP: -103PX;
+    TOP: -46PX;
     POSITION: RELATIVE;
 }
 
-.context-options .context-option {
-    font-size: 19px;
-    display: block;
-    padding: 12px 19px;
-    margin-bottom: 8px;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #ffffff;
-    border-radius: -3px;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
-}
-.context-options .context-option {
-    font-size: 19px;
-    display: block;
-    padding: 12px 19px;
-    margin-bottom: 8px;
-    background-color: rgb(0, 0, 0);
-    border: 2px solid #ffffff;
-    border-radius: -3px;
-    color: #ffffff;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.3s, transform 0.1s;
-}
+
 
 .context-options .context-option.ativo {
     background-color: green;
@@ -590,12 +585,13 @@ a.anchorjs-link {
     border: 6px solid #00000000;
 }
 #modoAutomatico {
-    display: inline-flex;
+    display: inline-flex
+;
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -609,7 +605,7 @@ a.anchorjs-link {
 }
 
 #modoAutomatico.desativado {
-    background: linear-gradient(45deg, #d32f2f, #000000); /* Cor desativada */
+    background: linear-gradient(45deg, #000000, #ff0000);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -620,6 +616,43 @@ a.anchorjs-link {
 
 #modoAutomatico:active {
     transform: scale(0.95); /* Leve redução no tamanho */
+}
+.context-option.hack-mines {
+    background: linear-gradient(45deg, #000000, #ff0000);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.context-option.hack-mines:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+    background: linear-gradient(45deg,#388e3c, #66bb6a); /* Efeito de hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.context-option.hack-mines:active {
+    transform: scale(0.95); /* Leve redução no clique */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.context-option.hack-double {
+    background: linear-gradient(45deg, #ff0000, #000000);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.context-option.hack-double:hover {
+    transform: scale(1.05); /* Leve aumento no hover */
+    background: linear-gradient(45deg, #388e3c, #66bb6a); /* Efeito de hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.context-option.hack-double:active {
+    transform: scale(0.95); /* Leve redução no clique */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícones */
+.context-option i {
+    margin-right: 8px;
+    font-size: 18px;
 }
 
     </style>
@@ -691,6 +724,12 @@ a.anchorjs-link {
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
+    <span class="context-option hack-mines" onclick="stopScroll();">
+        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
+    </span>
+    <span class="context-option hack-double" onclick="closeContextOptions();">
+        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
+    </span>
     
     <!-- Novo botão MODO AUTOMÁTICO -->
     <span id="modoAutomatico" class="context-option" onclick="toggleModoAutomatico();">
