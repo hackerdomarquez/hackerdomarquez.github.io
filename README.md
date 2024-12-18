@@ -818,7 +818,7 @@ function toggleModoAutomatico() {
         // Desativa o modo automático
         botao.classList.remove('ativo');
         botao.classList.add('desativado');
-        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO DESATIVADO';
+        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> DESATIVADO';
         modoAutomaticoAtivado = false;
         clearInterval(intervaloMudarIframe); // Para a troca automática
     } else {
@@ -948,7 +948,7 @@ function closeContextOptions() {
                 imageElement.style.height = 'auto';
                 imageElement.className = 'random-image';
                 imageElement.style.position = 'relative';
-                imageElement.style.top = '-25px';
+                imageElement.style.top = '10px';
                 contextOptions.appendChild(imageElement);
 
                 // Remove conteúdo após 7 segundos
@@ -959,7 +959,7 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 70300);
+                }, 7000);
             }
         }, 3000);
     }, 4000);
@@ -1025,7 +1025,7 @@ function toggleContextOptions() {
                 const assertividadeElement = document.createElement('div');
                 assertividadeElement.textContent = `Assertividade: ${assertividade}`;
                 assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '14px';
+                assertividadeElement.style.fontSize = '18px';
                 assertividadeElement.style.marginBottom = '0px';
                 assertividadeElement.style.color = 'green'; // Sempre verde porque assertividade é >= 90%
 
