@@ -149,7 +149,7 @@
     top: -9px;
     margin: 37px auto 20px;
     display: block;
-    TOP: -46PX;
+    TOP: -40PX;
     POSITION: RELATIVE;
 }
 
@@ -560,28 +560,29 @@ a.anchorjs-link {
 }
  
 .white-square {
-    width: 352px;
-    height: 408px;
-    border: 2px solid #ff000000;
+    width: 593px;
+    height: 646px;
+    background-color: #ffffff00;
+    border: 2px solid #00000000;
     position: absolute;
-    top: 47px;
-    left: 19px;
+    top: 36PX;
+    left: 108PX;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 64px);
-    grid-template-rows: repeat(5, 71px);
-    gap: 6px;
+    grid-template-columns: repeat(5, 95px);
+    grid-template-rows: repeat(5, 101px);
+    gap: 21px;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00;
-    border: 6px solid #00000000;
+    border: 7px solid #00000000;
 }
 #modoAutomatico {
     display: inline-flex;
@@ -616,14 +617,15 @@ a.anchorjs-link {
     transform: scale(0.95); /* Leve redução no tamanho */
 }
 .context-option.hack-mines {
-    background: linear-gradient(45deg, #000000, #ff0000);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .context-option.hack-mines:hover {
-    transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg, #00ff2a, #36f46f); /* Efeito de hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .context-option.hack-mines:active {
@@ -632,14 +634,15 @@ a.anchorjs-link {
 }
 
 .context-option.hack-double {
-    background: linear-gradient(45deg, #ff0000, #000000);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .context-option.hack-double:hover {
-    transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg, #388e3c, #66bb6a); /* Efeito de hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #0041a5, #000000);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .context-option.hack-double:active {
