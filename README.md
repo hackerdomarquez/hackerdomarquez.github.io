@@ -84,37 +84,16 @@
 
 .context-options {
     position: fixed;
-    top: 51%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 7px;
-    border-radius: 11px;
+    padding: 20px;
+    border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
     z-index: 10000;
     overflow: hidden;
-    display: flex
-;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.context-options .context-option {
-    display: flex
-;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 0px;
-    border-radius: 26px;
-    font-size: 17px;
-    font-weight: bold;
-    left: 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    width: 200px;
-    box-sizing: border-box;
 }
 
 .context-options .background-video {
@@ -147,21 +126,26 @@
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
-    top: -9px;
-    margin: 37px auto 20px;
+    top: -10px;
+    /* width: 31px; */
+    margin: 91px auto 20px;
     display: block;
-    TOP: -46PX;
+    TOP: -103PX;
     POSITION: RELATIVE;
 }
 
-
-
-.context-options .context-option.ativo {
-    background-color: green;
-}
-
-.context-options .context-option.desativado {
-    background-color: red;
+.context-options .context-option {
+    font-size: 19px;
+    display: block;
+    padding: 12px 19px;
+    margin-bottom: 8px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #ffffff;
+    border-radius: -3px;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 
@@ -179,6 +163,7 @@
         overflow-y: auto; 
         height: 100%; 
     }
+
     .login-wrapper {
     display: flex
 ;
@@ -187,7 +172,7 @@
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 364px;
+    top: 557px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -559,7 +544,6 @@ a.anchorjs-link {
         top: 60%; /* Vai um pouco abaixo do meio */
     }
 }
- 
 .white-square {
     width: 352px;
     height: 408px;
@@ -584,77 +568,6 @@ a.anchorjs-link {
     background-color: #ffffff00;
     border: 6px solid #00000000;
 }
-#modoAutomatico {
-    display: inline-flex
-;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 12px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-#modoAutomatico.ativo {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#modoAutomatico.desativado {
-    background: linear-gradient(45deg, #000000, #ff0000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#modoAutomatico:hover {
-    transform: scale(1.05); /* Leve aumento no tamanho */
-}
-
-#modoAutomatico:active {
-    transform: scale(0.95); /* Leve redução no tamanho */
-}
-.context-option.hack-mines {
-    background: linear-gradient(45deg, #000000, #ff0000);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-mines:hover {
-    transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg,#388e3c, #66bb6a); /* Efeito de hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-.context-option.hack-mines:active {
-    transform: scale(0.95); /* Leve redução no clique */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-double {
-    background: linear-gradient(45deg, #ff0000, #000000);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-double:hover {
-    transform: scale(1.05); /* Leve aumento no hover */
-    background: linear-gradient(45deg, #388e3c, #66bb6a); /* Efeito de hover */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-}
-
-.context-option.hack-double:active {
-    transform: scale(0.95); /* Leve redução no clique */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Ícones */
-.context-option i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
     </style>
 </head>
 
@@ -685,7 +598,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/mines')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
@@ -720,26 +633,19 @@ a.anchorjs-link {
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
     
     <div id="result"></div>
-    
+    <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+    <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
-    <span class="context-option hack-mines" onclick="stopScroll();">
-        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
-    </span>
-    <span class="context-option hack-double" onclick="closeContextOptions();">
-        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
-    </span>
-    
-    <!-- Novo botão MODO AUTOMÁTICO -->
-    <span id="modoAutomatico" class="context-option" onclick="toggleModoAutomatico();">
-        <i class="fa fa-robot" aria-hidden="true"></i> MODO AUTOMÁTICO
-    </span>
 
-    <div id="image-container"></div>
-    <div id="assertividade" class="assertivity-hidden"></div>
+                              
+
+        
+<div id="image-container"></div>
+<div id="assertividade" class="assertivity-hidden"></div>
+                        
 </div>
-
                                     
 <div class="white-square">
     <div class="grid-container">
@@ -773,7 +679,19 @@ a.anchorjs-link {
 
 </div>                 
     <script>
-        
+    // Função para abrir o contexto ao dar dois cliques
+    function openContextOptions() {
+        const contextOptions = document.getElementById('contextOptions');
+        contextOptions.style.display = 'block'; // Mostra o elemento
+    }
+
+    // Adiciona o evento de dois cliques para mouse
+    document.addEventListener('dblclick', (event) => {
+        const target = event.target;
+        if (target.closest('.background-video') || target.closest('.context-options')) {
+            openContextOptions();
+        }
+    });
 
     // Adiciona suporte para toque duplo em dispositivos móveis
     let lastTouchTime = 0;
@@ -809,66 +727,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
-
-        let modoAutomaticoAtivado = false;
-let intervaloMudarIframe;
-
-function toggleModoAutomatico() {
-    const botao = document.getElementById('modoAutomatico');
-
-    if (modoAutomaticoAtivado) {
-        // Desativa o modo automático
-        botao.classList.remove('ativo');
-        botao.classList.add('desativado');
-        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO DESATIVADO';
-        modoAutomaticoAtivado = false;
-        clearInterval(intervaloMudarIframe); // Para a troca automática
-    } else {
-        // Ativa o modo automático
-        botao.classList.remove('desativado');
-        botao.classList.add('ativo');
-        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO ATIVO';
-        modoAutomaticoAtivado = true;
-        iniciarModoAutomatico(); // Inicia a troca automática
-    }
-}
-
-function iniciarModoAutomatico() {
-    let urls = [
-        'https://blaze1.space/pt/games/double',
-        'https://blaze1.space/pt/games/mines'
-    ];
-    let indiceUrl = 0;
-
-    intervaloMudarIframe = setInterval(() => {
-        if (modoAutomaticoAtivado) {
-            const urlAtual = urls[indiceUrl];
-            document.getElementById('login-iframe').src = urlAtual;
-
-            if (urlAtual === 'https://blaze1.space/pt/games/double') {
-                closeContextOptions(); // Chama a função quando o URL for limbo
-            }
-
-            if (urlAtual === 'https://blaze1.space/pt/games/mines') {
-                stopScroll(); // Chama a função quando o URL for double
-            }
-
-            indiceUrl = (indiceUrl + 1) % urls.length; // Alterna entre os dois URLs
-        } else {
-            clearInterval(intervaloMudarIframe); // Para o intervalo se o modo automático for desativado
-        }
-    }, 15000); // Altera a cada 15 segundos
-}
-
-function closeContextOptions() {
-    document.getElementById('contextOptions').style.display = 'none'; // Fechar as opções
-}
-
-function stopScroll() {
-    document.body.style.overflow = 'hidden'; // Impede o scroll da página
-}
-
-function login(url) {
+        function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO101') {
         document.getElementById('loading-message').style.display = 'block';
@@ -881,8 +740,6 @@ function login(url) {
         alert('Senha incorreta. Tente novamente.');
     }
 }
-
-
 
 function closeContextOptions() { 
     const loadingAnimation = document.getElementById('loading-animation');
