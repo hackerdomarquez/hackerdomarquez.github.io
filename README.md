@@ -957,7 +957,7 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 7000);
+                }, 707700);
             }
         }, 3000);
     }, 4000);
@@ -1054,9 +1054,9 @@ function toggleContextOptions() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 8000); // Tempo de espera para reverter as mudanças (5 segundos)
+            }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
-    }, 8000); // Tempo de espera para a animação do "sniper" (4 segundos)
+    }, 7000); // Tempo de espera para a animação do "sniper" (4 segundos)
 }
 
 
