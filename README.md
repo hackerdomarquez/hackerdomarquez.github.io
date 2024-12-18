@@ -101,20 +101,17 @@
 }
 
 .context-options .context-option {
-    display: flex
+    display: inline-flex
 ;
     align-items: center;
     justify-content: center;
-    padding: 11px 0px;
-    border-radius: 26px;
-    font-size: 17px;
+    padding: 20px 20px;
+    border-radius: 30px;
+    font-size: 12px;
     font-weight: bold;
-    left: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     border: none;
-    width: 200px;
-    box-sizing: border-box;
 }
 
 .context-options .background-video {
