@@ -173,7 +173,7 @@
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 39px;
+    top: 15px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
