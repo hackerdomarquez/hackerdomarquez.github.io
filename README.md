@@ -84,37 +84,17 @@
 
 .context-options {
     position: fixed;
-    top: 51%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 7px;
-    border-radius: 11px;
+    padding: 20px;
+    border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
     z-index: 10000;
     overflow: hidden;
-    display: flex
-;
-    flex-direction: column;
-    gap: 6px;
 }
-
-.context-options .context-option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    width: 100%; /* Garante que os botões ocupem toda a largura */
-    box-sizing: border-box; /* Inclui padding e border no tamanho */
-}
-
 
 .context-options .background-video {
     position: absolute;
@@ -141,29 +121,36 @@
 
 
 .context-options .bot-title {
-    font-size: 19px;
+    font-size: 14px;
     text-align: center;
     margin-bottom: 20px;
     position: relative;
     color: #ffffff;
-    top: -9px;
-    margin: 37px auto 20px;
+    top: -10px;
+}
+
+.context-options .context-option {
+    font-size: 14px;
     display: block;
-    TOP: -40PX;
-    POSITION: RELATIVE;
+    padding: 11px 22px;
+    margin-bottom: 8px;
+    background-color: rgb(255 255 255);
+    border-radius: 6px;
+    color: #000000;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
-
-
-.context-options .context-option.ativo {
-    background-color: green;
+.context-options .context-option:hover {
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.05);
 }
 
-.context-options .context-option.desativado {
-    background-color: red;
+.context-options .closeContextOptions:hover {
+    background-color: rgb(255 0 0 / 80%);
+
 }
-
-
         .dev-by {
             font-size: 14px;
             text-align: center;
@@ -178,18 +165,19 @@
         overflow-y: auto; 
         height: 100%; 
     }
+
     .login-wrapper {
-    display: flex
-;
+    display: flex;
     align-items: center;
     justify-content: center;
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 364px;
+    top: 39px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
+
     .custom-container {
     text-align: center;
     max-width: 388px;
@@ -560,109 +548,36 @@ a.anchorjs-link {
 }
  
 .white-square {
-    width: 593px;
-    height: 646px;
-    background-color: #ffffff00;
-    border: 2px solid #00000000;
+    width: 352px;
+    height: 408px;
+    border: 2px solid #ff000000;
     position: absolute;
-    top: 36PX;
-    left: 108PX;
+    top: 47px;
+    left: 19px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 95px);
-    grid-template-rows: repeat(5, 101px);
-    gap: 21px;
+    grid-template-columns: repeat(5, 64px);
+    grid-template-rows: repeat(5, 71px);
+    gap: 6px;
     height: 100%;
     width: 100%;
 }
 
 .grid-item {
     background-color: #ffffff00;
-    border: 7px solid #00000000;
+    border: 6px solid #00000000;
 }
-#modoAutomatico {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-#modoAutomatico.ativo {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#modoAutomatico.desativado {
-    background: linear-gradient(45deg, #000000, #ff0000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-#modoAutomatico:hover {
-    transform: scale(1.05); /* Leve aumento no tamanho */
-}
-
-#modoAutomatico:active {
-    transform: scale(0.95); /* Leve redução no tamanho */
-}
-.context-option.hack-mines {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-mines:hover {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-mines:active {
-    transform: scale(0.95); /* Leve redução no clique */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-double {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-double:hover {
-    background: linear-gradient(45deg, #0041a5, #000000);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.context-option.hack-double:active {
-    transform: scale(0.95); /* Leve redução no clique */
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* Ícones */
-.context-option i {
-    margin-right: 8px;
-    font-size: 18px;
-}
-
     </style>
 </head>
 
 <body>
     <div class="video-background">
         <video autoplay="" loop="" muted="">
-          <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
+          <source src="https://sistemaminesalife.online/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
           
         </video>
       </div>
@@ -671,9 +586,15 @@ a.anchorjs-link {
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
-            
+                <p id="studentCount" class="mb-0" style="font-size: 39px; color: #00ff40; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);">
+                    <i class="fas fa-user-graduate" style="margin-right: 5px;"></i>
+                    <span style="font-weight: bold;">1000 ALUNOS</span> 
+                    <span style="color: #ff0000; font-weight: bold;">LIMITE: 1000</span>
+                </p>
                 
-          
+                <img class="login-intro-img" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Perfil">
+            </div>
+            
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
                 <form id="loginForm">
@@ -692,7 +613,7 @@ a.anchorjs-link {
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/double')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.com/pt/games/mines')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -715,32 +636,27 @@ a.anchorjs-link {
 
 <div class="context-options" id="contextOptions">
     <video autoplay muted loop class="background-video" playsinline>
-        <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
+        <source src="https://sistemaminesalife.online/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
-    
+    <img id="myImage" src="https://i.ibb.co/8xfpYGj/fotor-20241011144526.png" alt="Imagem Atual">
     <div id="result"></div>
-    
+    <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines</span>
+    <span class="context-option closeContextOptions" onclick="closeContextOptions();"><i class="fa fa-play" aria-hidden="true"></i> Hackear Double</span>
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
-    <span class="context-option hack-mines" onclick="stopScroll();">
-        <i class="fa fa-bomb" aria-hidden="true"></i> Hackear Mines
-    </span>
-    <span class="context-option hack-double" onclick="closeContextOptions();">
-        <i class="fa fa-play" aria-hidden="true"></i> Hackear Double
-    </span>
-    
-    <!-- Novo botão MODO AUTOMÁTICO -->
-    <span id="modoAutomatico" class="context-option" onclick="toggleModoAutomatico();">
-        <i class="fa fa-robot" aria-hidden="true"></i> MODO AUTOMÁTICO
-    </span>
-
-    <div id="image-container"></div>
-    <div id="assertividade" class="assertivity-hidden"></div>
 </div>
 
+
+                              
+
+        
+<div id="image-container"></div>
+<div id="assertividade" class="assertivity-hidden"></div>
+                        
+</div>
                                     
 <div class="white-square">
     <div class="grid-container">
@@ -774,24 +690,7 @@ a.anchorjs-link {
 
 </div>                 
     <script>
-        
 
-    // Adiciona suporte para toque duplo em dispositivos móveis
-    let lastTouchTime = 0;
-
-    document.addEventListener('touchstart', (event) => {
-        const currentTime = new Date().getTime();
-        const timeSinceLastTouch = currentTime - lastTouchTime;
-
-        if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
-            const target = event.target;
-            if (target.closest('.background-video') || target.closest('.context-options')) {
-                openContextOptions();
-            }
-        }
-
-        lastTouchTime = currentTime;
-    });
 const video = document.querySelector('.background-video');
 video.addEventListener('ended', () => {
     video.play(); // Força o replay caso o loop falhe
@@ -810,66 +709,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
-
-        let modoAutomaticoAtivado = false;
-let intervaloMudarIframe;
-
-function toggleModoAutomatico() {
-    const botao = document.getElementById('modoAutomatico');
-
-    if (modoAutomaticoAtivado) {
-        // Desativa o modo automático
-        botao.classList.remove('ativo');
-        botao.classList.add('desativado');
-        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO DESATIVADO';
-        modoAutomaticoAtivado = false;
-        clearInterval(intervaloMudarIframe); // Para a troca automática
-    } else {
-        // Ativa o modo automático
-        botao.classList.remove('desativado');
-        botao.classList.add('ativo');
-        botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO ATIVO';
-        modoAutomaticoAtivado = true;
-        iniciarModoAutomatico(); // Inicia a troca automática
-    }
-}
-
-function iniciarModoAutomatico() {
-    let urls = [
-        'https://blaze1.space/pt/games/double',
-        'https://blaze1.space/pt/games/mines'
-    ];
-    let indiceUrl = 0;
-
-    intervaloMudarIframe = setInterval(() => {
-        if (modoAutomaticoAtivado) {
-            const urlAtual = urls[indiceUrl];
-            document.getElementById('login-iframe').src = urlAtual;
-
-            if (urlAtual === 'https://blaze1.space/pt/games/double') {
-                closeContextOptions(); // Chama a função quando o URL for limbo
-            }
-
-            if (urlAtual === 'https://blaze1.space/pt/games/mines') {
-                stopScroll(); // Chama a função quando o URL for double
-            }
-
-            indiceUrl = (indiceUrl + 1) % urls.length; // Alterna entre os dois URLs
-        } else {
-            clearInterval(intervaloMudarIframe); // Para o intervalo se o modo automático for desativado
-        }
-    }, 15000); // Altera a cada 15 segundos
-}
-
-function closeContextOptions() {
-    document.getElementById('contextOptions').style.display = 'none'; // Fechar as opções
-}
-
-function stopScroll() {
-    document.body.style.overflow = 'hidden'; // Impede o scroll da página
-}
-
-function login(url) {
+        function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO101') {
         document.getElementById('loading-message').style.display = 'block';
@@ -882,7 +722,6 @@ function login(url) {
         alert('Senha incorreta. Tente novamente.');
     }
 }
-
 
 
 function closeContextOptions() { 
@@ -922,18 +761,24 @@ function closeContextOptions() {
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
 
-                // Gera assertividade entre 90% e 100%
-                const assertividadeValue = (90 + Math.random() * 10).toFixed(2);
-                const assertividade = `${assertividadeValue}%`;
+               // Gerar assertividade entre 1% e 100%
+const assertividadeValue = (1 + Math.random() * 99).toFixed(2);
+const assertividade = `${assertividadeValue}%`;
 
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green'; // Sempre verde
+const assertividadeElement = document.createElement('div');
+assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+assertividadeElement.className = 'assertividade';
+assertividadeElement.style.fontSize = '18px';
+assertividadeElement.style.marginBottom = '10px';
 
-                contextOptions.appendChild(assertividadeElement);
+// Alterar a cor com base na assertividade
+if (parseFloat(assertividadeValue) >= 90) {
+    assertividadeElement.style.color = 'green'; // Verde para 90% ou mais
+} else {
+    assertividadeElement.style.color = 'red'; // Vermelho para abaixo de 90%
+}
+
+contextOptions.appendChild(assertividadeElement);
 
                 // Lista de URLs de imagens
                 const imageUrls = [
@@ -960,9 +805,9 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 707700);
+                }, 7000);
             }
-        }, 3000);
+        }, 1000);
     }, 4000);
 }
 
@@ -1057,9 +902,9 @@ function toggleContextOptions() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
+            }, 8000); // Tempo de espera para reverter as mudanças (5 segundos)
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
-    }, 7000); // Tempo de espera para a animação do "sniper" (4 segundos)
+    }, 8000); // Tempo de espera para a animação do "sniper" (4 segundos)
 }
 
 
