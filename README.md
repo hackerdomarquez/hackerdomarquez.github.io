@@ -933,12 +933,12 @@ function closeContextOptions() {
                 assertividadeElement.style.top = '100px'; // Adiciona o deslocamento desejado
                 contextOptions.appendChild(assertividadeElement);
 
-                // Lista de URLs de imagens
+             // Lista de URLs de imagens
                 const imageUrls = [
-                    'https://i.ibb.co/WfX0bJ4/Captura-de-tela-2024-09-01-013829.png',
-                    'https://i.ibb.co/RDS5bK3/Captura-de-tela-2024-09-01-014104.png',
-                    'https://i.ibb.co/X2KPtR9/Captura-de-tela-2024-09-01-013952.png'
-                ];
+                'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
+                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
+            ];
 
                 const imageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
                 const imageElement = document.createElement('img');
