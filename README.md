@@ -935,8 +935,8 @@ function closeContextOptions() {
 
              // Lista de URLs de imagens
                 const imageUrls = [
-                'https://i.ibb.co/dcLFP9g/Captura-de-tela-2024-08-29-210854.png',
-                'https://i.ibb.co/tYSx6cT/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/ZY3T0rM/Captura-de-tela-2024-08-29-210831.png',
+                'https://i.ibb.co/xDpctvT/Captura-de-tela-2024-08-29-210854.png',
                 'https://i.ibb.co/y05dV4L/Captura-de-tela-2024-08-29-210805.png'
             ];
 
