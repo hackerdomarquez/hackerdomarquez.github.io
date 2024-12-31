@@ -330,9 +330,9 @@ html, body {
     border: 15px solid #00000000;
 }
 #draggable-image {
-    
     top: 18%;
     left: 16%;
+    position: fixed;
     transform: translate(-50%, -50%);
     width: 110px;
     height: 110px;
