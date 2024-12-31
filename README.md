@@ -102,7 +102,7 @@
 iframe {
     position: FIXED;
     width: 100%;
-    height: 102%;
+    height: 100%;
 }
 
 #iframe-container {
