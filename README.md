@@ -211,14 +211,7 @@ iframe {
 
 
         
-#draggable-image {
-   
-    width: 80px;
-    top: 0px;
-    left: 36px;
-    height: auto;
-    position: fixed;
-}
+
 
 
 
@@ -337,14 +330,14 @@ html, body {
     border: 15px solid #00000000;
 }
 #draggable-image {
-    position: absolute;
-    top: 10%;
-    left: 10%;
+    
+    top: 18%;
+    left: 16%;
     transform: translate(-50%, -50%);
     width: 110px;
     height: 110px;
     cursor: pointer;
-  }
+}
 
   #draggable-image img {
     width: 100%;
