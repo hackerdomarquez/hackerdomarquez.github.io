@@ -346,10 +346,7 @@ html, body {
     object-fit: contain;
   }
 
-  #iframe-container {
-    display: block;
-    position: relative;
-  }
+  
 
     </style>
 </head>
