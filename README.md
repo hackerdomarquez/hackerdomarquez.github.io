@@ -312,12 +312,13 @@ html, body {
     width: 402px;
     height: 448px;
     position: absolute;
-    top: 135px;
+    top: 150px;
     left: 7px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(5, 76px);
