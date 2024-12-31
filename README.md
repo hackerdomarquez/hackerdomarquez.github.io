@@ -106,12 +106,13 @@ iframe {
 }
 
 #iframe-container {
-    display: none;
+   
     width: 100%;
     height: 100%;
-    TOP: 0PX;
+    TOP: 16PX;
     LEFT: 0PX;
-    position: fixed;
+    display: block;
+    position: relative;
     z-index: 9999;
 } 
 
