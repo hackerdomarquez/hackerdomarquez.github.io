@@ -124,7 +124,7 @@ iframe {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
@@ -318,8 +318,8 @@ html, body {
     width: 402px;
     height: 448px;
     position: absolute;
-    top: 189px;
-    left: 4px;
+    top: 135px;
+    left: 7px;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
