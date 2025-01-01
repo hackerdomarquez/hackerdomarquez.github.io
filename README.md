@@ -406,19 +406,9 @@
         height: 150vh;
         border: none; 
     }
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 62px);
-    grid-template-rows: repeat(5, 69px);
-    gap: 1px;
-    height: 100%;
-    width: 100%;
-}
+ 
 
-        .grid-item {
-            background-color: #00000000;
-            border: 6px solid #00000000;
-        }
+   
 
   
 
@@ -553,22 +543,23 @@ a.anchorjs-link {
 }
  
 .white-square {
-    width: 593px;
+    width: 600px;
     height: 646px;
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: 36PX;
-    left: 108PX;
+    top: 75PX;
+    left: 132PX;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
-    display: grid;
+    display: grid
+;
     grid-template-columns: repeat(5, 95px);
     grid-template-rows: repeat(5, 101px);
-    gap: 21px;
+    gap: 22px;
     height: 100%;
     width: 100%;
 }
