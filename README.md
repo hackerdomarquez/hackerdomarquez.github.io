@@ -940,7 +940,7 @@ function closeContextOptions() {
                 imageElement.style.height = 'auto';
                 imageElement.className = 'random-image';
                 imageElement.style.position = 'relative';
-                imageElement.style.top = '-22px';
+                imageElement.style.top = '-8px';
                 contextOptions.appendChild(imageElement);
                 imageElement.style.margin = '-31px auto 8px';
 
@@ -953,7 +953,7 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 709900);
+                }, 7000);
             }
         }, 4000);
     }, 5000);
