@@ -80,38 +80,30 @@
     width: 100%;
     display: none; 
 }
-
 .context-options {
     position: fixed;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.8);
     padding: 21px;
-    border-radius: 11px;
+    border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
     z-index: 10000;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
 }
 
 .context-options .context-option {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 3px;
-    border-radius: 30px;
     font-size: 16px;
-    TOP: 27PX;
-    POSITION: static;
+    display: block;
+    padding: 13px 0px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    color: #ffffff;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: none;
-    width: 100%;
-    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.1s;
 }
 
 .context-options .background-video {
@@ -406,9 +398,19 @@
         height: 150vh;
         border: none; 
     }
- 
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 62px);
+    grid-template-rows: repeat(5, 69px);
+    gap: 1px;
+    height: 100%;
+    width: 100%;
+}
 
-   
+        .grid-item {
+            background-color: #00000000;
+            border: 6px solid #00000000;
+        }
 
   
 
@@ -541,7 +543,6 @@ a.anchorjs-link {
         top: 60%; /* Vai um pouco abaixo do meio */
     }
 }
- 
 .white-square {
     width: 600px;
     height: 646px;
@@ -674,7 +675,7 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze.bet.br/pt/games/mines')" style="height: 60px;">
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze1.space/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
@@ -1049,7 +1050,7 @@ function toggleContextOptions() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 7003330); // Tempo de espera para reverter as mudanças (5 segundos)
+            }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
         }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
     }, 7000); // Tempo de espera para a animação do "sniper" (4 segundos)
 }
