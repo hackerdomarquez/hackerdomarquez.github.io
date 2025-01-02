@@ -953,7 +953,7 @@ function closeContextOptions() {
                         if (assertividadeElement) contextOptions.removeChild(assertividadeElement);
                         if (randomImageElement) contextOptions.removeChild(randomImageElement);
                     }
-                }, 7000);
+                }, 709900);
             }
         }, 4000);
     }, 5000);
