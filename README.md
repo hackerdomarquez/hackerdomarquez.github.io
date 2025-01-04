@@ -763,7 +763,7 @@ a.anchorjs-link {
        
     
         <p class="atencao">Atenção: </p>
-         <p>O HACKER ESTA BLOQUEADO NENHUMA ENTRADA FOI FEITA </p>
+         <p>O HACKER ESTA BLOQUEADO NENHUMA ENTRADA FOI FEITA OU BANCA ABAIXO DE 30</p>
     </div>
 </div>
 </div>
