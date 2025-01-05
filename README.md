@@ -693,7 +693,7 @@ a.anchorjs-link {
     width: 402px;
     height: 448px;
     position: absolute;
-    top: 110px;
+    top: 150px;
     left: 7px;
     z-index: 10000;
     overflow: hidden;
