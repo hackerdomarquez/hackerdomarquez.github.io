@@ -697,8 +697,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
-        let modoAutomaticoAtivado = false;
-let intervaloMudarIframe;
+ 
+
+let intervaloStopScroll;
+let modoAutomaticoAtivado = false; // Variável para controlar o estado do modo automático
+
 function toggleModoAutomatico() {
     const botao = document.getElementById('modoAutomatico');
     if (modoAutomaticoAtivado) {
@@ -707,44 +710,29 @@ function toggleModoAutomatico() {
         botao.classList.add('desativado');
         botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTO DESATIVADO';
         modoAutomaticoAtivado = false;
-        clearInterval(intervaloMudarIframe); // Para a troca automática
+        clearInterval(intervaloStopScroll); // Para a execução do stopScroll
     } else {
         // Ativa o modo automático
         botao.classList.remove('desativado');
         botao.classList.add('ativo');
         botao.innerHTML = '<i class="fa fa-robot" aria-hidden="true"></i> AUTOMÁTICO ATIVO';
         modoAutomaticoAtivado = true;
-        iniciarModoAutomatico(); // Inicia a troca automática
+        iniciarStopScroll(); // Inicia a execução periódica de stopScroll
     }
 }
-function iniciarModoAutomatico() {
-    let urls = [
-        'https://blaze1.space/pt/games/double',
-        'https://blaze1.space/pt/games/mines'
-    ];
-    let indiceUrl = 0;
-    intervaloMudarIframe = setInterval(() => {
+
+function iniciarStopScroll() {
+    intervaloStopScroll = setInterval(() => {
         if (modoAutomaticoAtivado) {
-            const urlAtual = urls[indiceUrl];
-            document.getElementById('login-iframe').src = urlAtual;
-            if (urlAtual === 'https://blaze1.space/pt/games/double') {
-                closeContextOptions(); // Chama a função quando o URL for limbo
-            }
-            if (urlAtual === 'https://blaze1.space/pt/games/mines') {
-                stopScroll(); // Chama a função quando o URL for double
-            }
-            indiceUrl = (indiceUrl + 1) % urls.length; // Alterna entre os dois URLs
-        } else {
-            clearInterval(intervaloMudarIframe); // Para o intervalo se o modo automático for desativado
+            stopScroll(); // Executa stopScroll a cada 7 segundos
         }
-    }, 15000); // Altera a cada 15 segundos
+    }, 11000);
 }
-function closeContextOptions() {
-    document.getElementById('contextOptions').style.display = 'none'; // Fechar as opções
-}
+
 function stopScroll() {
     document.body.style.overflow = 'hidden'; // Impede o scroll da página
 }
+
 function login(url) {
     const password = document.getElementById('password').value;
     if (password === 'ALUNO101') {
@@ -912,8 +900,8 @@ const assertividade = `${assertividadeValue}%`;
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => (item.innerHTML = ''));
                 }
-            }, 7000); // Tempo de espera para reverter as mudanças (5 segundos)
-        }, 1000); // Tempo de espera para a animação de carregamento (1 segundo)
+            }, 6000); // Tempo de espera para reverter as mudanças (5 segundos)
+        }, 500); // Tempo de espera para a animação de carregamento (1 segundo)
     }, 4000); // Tempo de espera para a animação do "sniper" (4 segundos)
 }
 
