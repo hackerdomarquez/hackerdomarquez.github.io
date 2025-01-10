@@ -91,7 +91,6 @@
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
-    DISPLAY: NONE;
     z-index: 10000;
     overflow: hidden;
 }
@@ -303,11 +302,11 @@ img, svg {
             transform: scale(1.05);
         }
         .btn-primary2:hover {
-    background-color: #37ff0000;
-    color: #000;
-    box-shadow: 0 0 30px rgb(106 0 255 / 80%);
-    transform: scale(1.05);
-}
+            background-color: #37ff0000;
+            color: #000;
+            box-shadow: 0 0 30px rgba(111, 0, 255, 0.8);
+            transform: scale(1.05);
+        }
 .social-icons a.instagram {
     color: #C13584; 
 
@@ -419,11 +418,10 @@ img, svg {
     width: 100%;
 }
 
-        .grid-item {
-            background-color: #00000000;
-            border: 6px solid #00000000;
-        }
-
+.grid-item {
+    background-color: #ffffff00;
+    border: 10px solid #00000000;
+}
   
 
         #draggable-image img {
@@ -691,6 +689,29 @@ a.anchorjs-link {
     cursor: pointer;
     pointer-events: auto; /* Permite cliques no botão */
 }
+.white-square {
+    width: 402px;
+    height: 448px;
+    position: absolute;
+    top: 110px;
+    left: 7px;
+    z-index: 10000;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 76px);
+    grid-template-rows: repeat(5, 76px);
+    gap: 5px;
+    height: 100%;
+    width: 100%;
+}
+.grid-item {
+    background-color: #ffffff00;
+    border: 15px solid #00000000;
+}
 
     </style>
 </head>
@@ -744,7 +765,7 @@ a.anchorjs-link {
                    
                     
                   <div class="social-icons mt-3">
-                    <a href="https://www.instagram.com/marquesz.00/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/hackermarquesz" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
@@ -757,19 +778,49 @@ a.anchorjs-link {
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Hacker"></div>
 
- 
+<div class="white-square">
+    <div class="grid-container">
+      
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        
+
+</div>    
 <div class="overlay" id="overlay">
     <div class="aviso">
        
-    
-        <p class="atencao">Atenção: </p>
-         <p>O HACKER ESTA BLOQUEADO NENHUMA ENTRADA FOI FEITA OU BANCA ABAIXO DE R$30</p>
+        <p>O HACKER ESTA BLOQUEANDO NENHUMA ENTRADA FEITA </p>
+        <p class="atencao">Atenção: DEPOSITE 30 PARA DESBLOQUEAR O HACKER E FAÇA UMA ENTRADA.</p>
+        
     </div>
 </div>
 </div>
 <div class="context-options" id="contextOptions">
     <video autoplay muted loop class="background-video" playsinline>
-        <source src="https://doublejonwhite.com/Video2.mp4" type="video/mp4">
+        <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez </span>
@@ -841,36 +892,63 @@ function login(url) {
 }
 
 
-
 function stopScroll() {
-    const loadingOverlay = document.getElementById('loading-overlay');
-    const overlay = document.getElementById('overlay');
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const loadingAnimation = document.getElementById('loading-animation');
+        const contextOptions = document.getElementById('contextOptions');
 
-    // Mostrar o overlay de carregamento
-    if (loadingOverlay) {
-        loadingOverlay.style.display = 'flex';
+        // Mostrar o overlay de carregamento
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'flex';
+        }
+
+        setTimeout(() => {
+            // Esconder o overlay de carregamento
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
+
+            // Lógica principal após o carregamento
+            const assertividade = '100%';
+
+            if (contextOptions) {
+                const existingAssertividade = contextOptions.querySelector('.assertividade');
+                if (existingAssertividade) {
+                    contextOptions.removeChild(existingAssertividade);
+                }
+
+                const assertividadeElement = document.createElement('div');
+                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
+                assertividadeElement.className = 'assertividade';
+                assertividadeElement.style.fontSize = '18px';
+                assertividadeElement.style.marginBottom = '10px';
+                assertividadeElement.style.color = 'green';
+
+                contextOptions.appendChild(assertividadeElement);
+
+                const gridItems = document.querySelectorAll('.grid-item');
+                gridItems.forEach(item => item.innerHTML = '');
+                const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
+                const itemsToChange = shuffledItems.slice(0, 7);
+                const imageUrl = 'https://brwinner.net/mines/zs.png';
+                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
+                itemsToChange.forEach(item => item.innerHTML += imageElement);
+            }
+
+            setTimeout(() => {
+                if (contextOptions) {
+                    const assertividadeElement = contextOptions.querySelector('.assertividade');
+                    if (assertividadeElement) {
+                        contextOptions.removeChild(assertividadeElement);
+                    }
+
+                    const gridItems = document.querySelectorAll('.grid-item');
+                    gridItems.forEach(item => item.innerHTML = '');
+                }
+            }, 8000);
+        }, 5000);
     }
 
-    setTimeout(() => {
-        // Esconder o overlay de carregamento
-        if (loadingOverlay) {
-            loadingOverlay.style.display = 'none';
-        }
-
-        // Mostrar o overlay do "hacker"
-        if (overlay) {
-            overlay.style.display = 'flex';
-        }
-
-        // Após 7 segundos, restaurar ao estado inicial
-        setTimeout(() => {
-            if (overlay) {
-                overlay.style.display = 'none';  // Esconde o overlay "hacker"
-            }
-            // Você pode colocar mais lógica aqui para restaurar o estado de outros elementos
-        }, 7000); // 7 segundos para restaurar
-    }, 5000); // 5 segundos para exibir o "hacker overlay"
-}
 
 
         function toggleContextOptions() {      
