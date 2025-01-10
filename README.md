@@ -653,7 +653,7 @@ a.anchorjs-link {
                             <button 
                                 class="btn btn-primary2 w-100" 
                                 type="button" 
-                                onclick="login('https://jogar.win/y829fn1qx')" 
+                                onclick="login('https://tudo.win/y8eqmzssp')" 
                                 style="height: 60px;">
                                 <img src="https://jogar.win/img/logo.e6258434.png" alt="Logo" class="large-icon">
                             </button>
