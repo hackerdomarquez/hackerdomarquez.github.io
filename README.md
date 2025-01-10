@@ -8,16 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <style>
-
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
         .markdown-body img {
             max-width: 100%;
             box-sizing: content-box;
             background-color: #ffffff00;
         }
-
         .hJxlOV video {
     width: 100%;
     min-height: 268px;
@@ -46,29 +43,24 @@
     animation: spin 1s linear infinite;
     box-shadow: 0 0 20px rgb(255 0 0);
 }
-
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
             }
-
             100% {
                 transform: rotate(360deg);
             }
         }
-
         #image-container img {
             max-width: 100%;
             height: auto;
         }
-
         .feedback-hidden {
     display: none;
     color: #ffffff;
     font-family: 'M PLUS 1 Code', monospace;
     margin-top: 10px;
 }
-
 #hack-feedback {
     font-size: 14px;
     text-align: center;
@@ -80,7 +72,6 @@
     width: 100%;
     display: none; 
 }
-
 .context-options {
     position: fixed;
     top: 77%;
@@ -91,6 +82,7 @@
     border-radius: 10px;
     font-family: 'M PLUS 1 Code', sans-serif;
     color: #ffffff;
+    DISPLAY: NONE;
     z-index: 10000;
     overflow: hidden;
 }
@@ -108,7 +100,6 @@
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .context-options .background-video {
     position: absolute;
     top: 0;
@@ -118,8 +109,6 @@
     object-fit: cover;
     z-index: -1;
 }
-
-
 .context-options img {
     width: 80px;
     margin: -31px auto 8px;
@@ -127,7 +116,6 @@
     TOP: 0PX;
     POSITION: RELATIVE;
 }
-
 img, svg {
     vertical-align: middle;
     WIDTH: 100%;
@@ -149,25 +137,18 @@ img, svg {
     TOP: -103PX;
     POSITION: RELATIVE;
 }
-
-
-
 .context-options .context-option.ativo {
     background-color: green;
 }
-
 .context-options .context-option.desativado {
     background-color: red;
 }
-
-
         .dev-by {
             font-size: 14px;
             text-align: center;
             color: #00ff3d;
             margin-top: 20px;
         }
-
         html, body {
         margin: 0;
         padding: 0;
@@ -196,17 +177,14 @@ img, svg {
     border-radius: 23px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 }
-
         .login-intro-img {
             max-width: 100%;
             height: auto;
             margin-bottom: 7px;
         }
-
         .register-form h6 {
             color: #ffffff;
         }
-
         .register-form p {
             color: rgb(255, 255, 255);
         }
@@ -214,7 +192,6 @@ img, svg {
     position: relative;
     margin-bottom: 30px;
 }
-
 .form-control {
     background-color: #000; 
     border: 2px solid #686868; 
@@ -225,19 +202,15 @@ img, svg {
     font-size: 16px;
     box-shadow: 0 0 10px rgba(0, 255, 68, 0); 
 }
-
 .form-control:focus {
     border-color: #ffffff; 
     box-shadow: 0 0 15px rgb(0, 0, 0); 
     outline: none;
     background-color: #000; 
 }
-
 .form-control::placeholder {
     color: rgb(247, 247, 247); 
 }
-
-
 .btn-primary2 {
     background-color: #000000;
     border: 2px solid #7a00ff;
@@ -302,62 +275,48 @@ img, svg {
             transform: scale(1.05);
         }
         .btn-primary2:hover {
-            background-color: #37ff0000;
-            color: #000;
-            box-shadow: 0 0 30px rgba(111, 0, 255, 0.8);
-            transform: scale(1.05);
-        }
+    background-color: #37ff0000;
+    color: #000;
+    box-shadow: 0 0 30px rgb(106 0 255 / 80%);
+    transform: scale(1.05);
+}
 .social-icons a.instagram {
     color: #C13584; 
-
 }
-
 .social-icons a.instagram:hover {
     color: #e1306c; 
     text-shadow: 0 0 15px rgba(225, 48, 108, 0.8);
 }
-
 .social-icons a.telegram {
     color: #0088cc; 
-
 }
-
 .social-icons a.telegram:hover {
     color: #00acee; 
     text-shadow: 0 0 15px rgba(0, 172, 238, 0.8);
 }
-
 .social-icons a.whatsapp {
     color: #25D366; 
-
 }
-
 .social-icons a.whatsapp:hover {
     color: #128C7E; 
     text-shadow: 0 0 15px rgba(18, 140, 126, 0.8);
 }
-
-
 .social-icons {
     margin-top: 20px;
     text-align: center;
 }
-
 .social-icons a {
     color: #ffffff;
     font-size: 2.5rem;
     margin: 0 15px;
     position: relative;
     transition: color 0.3s ease, transform 0.3s ease;
-
 }
 .social-icons a:hover {
     color: #ff0000; 
     transform: scale(1.2); 
     text-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 51, 0.5); 
 }
-
-
 .social-icons a::after {
     content: '';
     position: absolute;
@@ -370,13 +329,11 @@ img, svg {
     transform-origin: right;
     transition: transform 0.4s ease, background-color 0.4s ease;
 }
-
 .social-icons a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
     background-color: #ff0000; 
 }
-
 .social-icons a:hover::before {
     content: '';
     position: absolute;
@@ -389,11 +346,9 @@ img, svg {
     transform: translateX(-50%) scale(0);
     transition: transform 0.4s ease;
 }
-
 .social-icons a:hover::before {
     transform: translateX(-50%) scale(1);
 }
-
 #iframe-container {
     display: none;
     width: 100vw;
@@ -403,15 +358,24 @@ img, svg {
     left: 0px;
     z-index: 9999;
 }
-
     iframe {
         width: 100vw; 
         height: 100vh;
         border: none; 
     }
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 62px);
+    grid-template-rows: repeat(5, 69px);
+    gap: 1px;
+    height: 100%;
+    width: 100%;
+}
+        .grid-item {
+            background-color: #00000000;
+            border: 6px solid #00000000;
+        }
   
-
-
         #draggable-image img {
     width: 137px;
     top: 24px;
@@ -424,11 +388,9 @@ img, svg {
         }
         
       
-
 .loading-hidden {
     display: none; 
 }
-
 .loading-visible {
     display: flex; 
     align-items: center;
@@ -444,14 +406,11 @@ img, svg {
     width: 111px;
     height: 53px;
 }
-
-
         video {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-
         .controls {
             position: absolute;
             top: 20px;
@@ -461,19 +420,15 @@ img, svg {
         .student-count {
     display: block; 
 }
-
 .mt-3 {
     margin-top: 20px;
 }
 h1 {
     display: none;
 }
-
-
 h1 a[href="https://aplicativomarquez.github.io/"] {
     display: none;
 }
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%; 
@@ -482,7 +437,6 @@ h1 a[href="https://aplicativomarquez.github.io/"] {
     max-width: 100%;
     background: #000; 
 }
-
 .video-container video {
     position: absolute;
     top: 0;
@@ -514,7 +468,6 @@ a.anchorjs-link {
     z-index: 9999;
     overflow: hidden;
 }
-
 .loading-overlay::before {
     content: "";
     position: absolute;
@@ -525,7 +478,6 @@ a.anchorjs-link {
     background-color: green;
     animation: moveUpDown 2s ease-in-out infinite;
 }
-
 /* Animação para o movimento do risco (subindo e descendo) */
 @keyframes moveUpDown {
     0% {
@@ -539,7 +491,6 @@ a.anchorjs-link {
     }
 }
  
-
 #modoAutomatico {
     display: inline-flex;
     align-items: center;
@@ -552,23 +503,19 @@ a.anchorjs-link {
     transition: all 0.3s ease;
     border: none;
 }
-
 #modoAutomatico.ativo {
     background: linear-gradient(172deg, #229c05, #000000);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 #modoAutomatico.desativado {
     background: linear-gradient(45deg, #000000, #000000);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 #modoAutomatico:hover {
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
-
 #modoAutomatico:active {
     transform: scale(0.95); /* Leve redução no tamanho */
 }
@@ -579,18 +526,15 @@ a.anchorjs-link {
     border: 2px solid white; /* Adiciona uma "porta branca" na forma de borda */
     border-radius: 5px; /* Suaviza os cantos para um visual mais elegante */
 }
-
 .context-option.hack-mines:hover {
     background: linear-gradient(45deg, #0041a5, #000000);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .context-option.hack-mines:active {
     transform: scale(0.95); /* Leve redução no clique */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
-
 .context-option.hack-double {
     background: linear-gradient(45deg, #000000, #000000);
     color: white;
@@ -598,18 +542,15 @@ a.anchorjs-link {
     border: 2px solid white; /* Adiciona uma "porta branca" na forma de borda */
     border-radius: 5px; /* Suaviza os cantos para um visual mais elegante */
 }
-
 .context-option.hack-double:hover {
     background: linear-gradient(45deg, #0041a5, #000000);
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
 .context-option.hack-double:active {
     transform: scale(0.95); /* Leve redução no clique */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
-
 /* Ícones */
 .context-option i {
     margin-right: 8px;
@@ -624,7 +565,6 @@ a.anchorjs-link {
     overflow: hidden;
     z-index: -1;
   }
-
   .video-background video {
     position: absolute;
     top: 50%;
@@ -646,7 +586,6 @@ a.anchorjs-link {
     align-items: center;
     z-index: 1000; /* Certifique-se de que está acima de outros elementos */
 }
-
 .aviso {
     position: relative;
     width: 400px;
@@ -657,15 +596,12 @@ a.anchorjs-link {
     color: white;
     font-family: Arial, sans-serif;
 }
-
 .aviso p {
     margin: 10px 0;
 }
-
 .aviso .atencao {
     color: red;
 }
-
 .close-btn {
     position: absolute;
     top: -17px;
@@ -677,36 +613,8 @@ a.anchorjs-link {
     cursor: pointer;
     pointer-events: auto; /* Permite cliques no botão */
 }
-
-.white-square {
-    width: 593px;
-    height: 646px;
-    background-color: #ffffff00;
-    border: 2px solid #00000000;
-    position: absolute;
-    top: 167PX;
-    left: 179PX;
-    z-index: 10000;
-    overflow: hidden;
-    pointer-events: none;
-}
-.grid-container {
-    display: grid
-;
-    grid-template-columns: repeat(5, 80px);
-    grid-template-rows: repeat(5, 79px);
-    gap: 12px;
-    height: 100%;
-    width: 100%;
-}
-.grid-item {
-    background-color: #ffffff00;
-    border: 13px solid #00000000;
-}
-
     </style>
 </head>
-
 <body>
     <div class="video-background">
         <video autoplay loop muted>
@@ -715,7 +623,6 @@ a.anchorjs-link {
         </video>
       </div>
       
-
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
@@ -756,7 +663,7 @@ a.anchorjs-link {
                    
                     
                   <div class="social-icons mt-3">
-                    <a href="https://www.instagram.com/marquez.mines/?hl=pt-br" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.instagram.com/marquesz.00/" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
                     <a href="https://t.me/hackermarquesz" target="_blank" class="telegram"><i class="bi bi-telegram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=554299577743&text=Como%20fa%C3%A7o%20pra%20compra%20o%20Rob%C3%B4?" target="_blank" class="whatsapp"><i class="bi bi-whatsapp"></i></a>
                 </div>
@@ -765,47 +672,15 @@ a.anchorjs-link {
 <div id="iframe-container">
 <iframe id="login-iframe" src=""></iframe>
 <div id="loading-overlay" class="loading-overlay"></div>
-
 <div id="draggable-image" class="draggable" onclick="toggleContextOptions()">
 <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Hacker"></div>
-
-<div class="white-square">
-    <div class="grid-container">
-      
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        
-
-</div>    
+ 
 <div class="overlay" id="overlay">
     <div class="aviso">
        
-        <p>O HACKER ESTA BLOQUEANDO NENHUMA ENTRADA FEITA </p>
-        <p class="atencao">Atenção: DEPOSITE 30 PARA DESBLOQUEAR O HACKER E FAÇA UMA ENTRADA.</p>
-        
+    
+        <p class="atencao">Atenção: </p>
+         <p>O HACKER ESTA BLOQUEADO NENHUMA ENTRADA FOI FEITA OU BANCA ABAIXO DE R$30</p>
     </div>
 </div>
 </div>
@@ -818,45 +693,32 @@ a.anchorjs-link {
     
     <div id="result"></div>
     <span class="context-option" onclick="stopScroll();"><i class="fa fa-bomb" aria-hidden="true"></i> HACKEAR MINES</span>
-
     <div id="loading-animation" class="loading-hidden">
         <div class="spinner"></div>
     </div>
-
-
-
-
-
                                     
              
     <script>
         
-
     // Adiciona suporte para toque duplo em dispositivos móveis
     let lastTouchTime = 0;
-
     document.addEventListener('touchstart', (event) => {
         const currentTime = new Date().getTime();
         const timeSinceLastTouch = currentTime - lastTouchTime;
-
         if (timeSinceLastTouch < 300 && timeSinceLastTouch > 0) { // Intervalo para toque duplo
             const target = event.target;
             if (target.closest('.background-video') || target.closest('.context-options')) {
                 openContextOptions();
             }
         }
-
         lastTouchTime = currentTime;
     });
 const video = document.querySelector('.background-video');
 video.addEventListener('ended', () => {
     video.play(); // Força o replay caso o loop falhe
 });
-
-
 document.addEventListener('DOMContentLoaded', function () {
             var video = document.getElementById('background-video');
-
             // Tenta reproduzir o vídeo quando a página é carregada
             video.play().then(() => {
                 // Sucesso, o vídeo está sendo reproduzido
@@ -866,82 +728,41 @@ document.addEventListener('DOMContentLoaded', function () {
                 video.play();
             });
         });
-
         let modoAutomaticoAtivado = false;
 let intervaloMudarIframe;
-
-
 function login(url) {
     // Esconde o wrapper de login
     document.getElementById('login-wrapper').style.display = 'none';
-
     // Mostra o contêiner do iframe
     document.getElementById('iframe-container').style.display = 'block';
-
     // Atualiza a URL do iframe
     document.getElementById('login-iframe').src = url;
 }
-
-
 function stopScroll() {
-        const loadingOverlay = document.getElementById('loading-overlay');
-        const loadingAnimation = document.getElementById('loading-animation');
-        const contextOptions = document.getElementById('contextOptions');
-
-        // Mostrar o overlay de carregamento
-        if (loadingOverlay) {
-            loadingOverlay.style.display = 'flex';
-        }
-
-        setTimeout(() => {
-            // Esconder o overlay de carregamento
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'none';
-            }
-
-            // Lógica principal após o carregamento
-            const assertividade = '100%';
-
-            if (contextOptions) {
-                const existingAssertividade = contextOptions.querySelector('.assertividade');
-                if (existingAssertividade) {
-                    contextOptions.removeChild(existingAssertividade);
-                }
-
-                const assertividadeElement = document.createElement('div');
-                assertividadeElement.textContent = `Assertividade: ${assertividade}`;
-                assertividadeElement.className = 'assertividade';
-                assertividadeElement.style.fontSize = '18px';
-                assertividadeElement.style.marginBottom = '10px';
-                assertividadeElement.style.color = 'green';
-
-                contextOptions.appendChild(assertividadeElement);
-
-                const gridItems = document.querySelectorAll('.grid-item');
-                gridItems.forEach(item => item.innerHTML = '');
-                const shuffledItems = Array.from(gridItems).sort(() => 0.7 - Math.random());
-                const itemsToChange = shuffledItems.slice(0, 7);
-                const imageUrl = 'https://brwinner.net/mines/zs.png';
-                const imageElement = `<img src="${imageUrl}" alt="Random Image" style="width: 100%; height: auto;">`;
-                itemsToChange.forEach(item => item.innerHTML += imageElement);
-            }
-
-            setTimeout(() => {
-                if (contextOptions) {
-                    const assertividadeElement = contextOptions.querySelector('.assertividade');
-                    if (assertividadeElement) {
-                        contextOptions.removeChild(assertividadeElement);
-                    }
-
-                    const gridItems = document.querySelectorAll('.grid-item');
-                    gridItems.forEach(item => item.innerHTML = '');
-                }
-            }, 7000);
-        }, 5000);
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const overlay = document.getElementById('overlay');
+    // Mostrar o overlay de carregamento
+    if (loadingOverlay) {
+        loadingOverlay.style.display = 'flex';
     }
-
-
-
+    setTimeout(() => {
+        // Esconder o overlay de carregamento
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+        // Mostrar o overlay do "hacker"
+        if (overlay) {
+            overlay.style.display = 'flex';
+        }
+        // Após 7 segundos, restaurar ao estado inicial
+        setTimeout(() => {
+            if (overlay) {
+                overlay.style.display = 'none';  // Esconde o overlay "hacker"
+            }
+            // Você pode colocar mais lógica aqui para restaurar o estado de outros elementos
+        }, 7000); // 7 segundos para restaurar
+    }, 5000); // 5 segundos para exibir o "hacker overlay"
+}
         function toggleContextOptions() {      
             var menu = document.getElementById('contextOptions');
             if (menu.style.display === 'none' || menu.style.display === '') {
@@ -953,7 +774,6 @@ function stopScroll() {
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
    
-
       
     </script>
  
