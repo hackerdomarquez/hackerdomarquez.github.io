@@ -689,28 +689,31 @@ a.anchorjs-link {
     cursor: pointer;
     pointer-events: auto; /* Permite cliques no botão */
 }
+
 .white-square {
-    width: 402px;
-    height: 448px;
+    width: 593px;
+    height: 646px;
+    background-color: #ffffff00;
+    border: 2px solid #00000000;
     position: absolute;
-    top: 110px;
-    left: 7px;
+    top: 116PX;
+    left: 179PX;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
-
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 76px);
-    grid-template-rows: repeat(5, 76px);
-    gap: 5px;
+    grid-template-columns: repeat(5, 81px);
+    grid-template-rows: repeat(5, 81px);
+    gap: 12px;
     height: 100%;
     width: 100%;
 }
+
 .grid-item {
     background-color: #ffffff00;
-    border: 15px solid #00000000;
+    border: 13px solid #00000000;
 }
 
     </style>
@@ -945,7 +948,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 8000);
+            }, 7000);
         }, 5000);
     }
 
