@@ -704,7 +704,7 @@ a.anchorjs-link {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 81px);
+    grid-template-columns: repeat(5, 80px);
     grid-template-rows: repeat(5, 81px);
     gap: 12px;
     height: 100%;
@@ -948,7 +948,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 7000);
+            }, 70400);
         }, 5000);
     }
 
