@@ -409,20 +409,8 @@ img, svg {
         height: 100vh;
         border: none; 
     }
-    .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 62px);
-    grid-template-rows: repeat(5, 69px);
-    gap: 1px;
-    height: 100%;
-    width: 100%;
-}
-
-.grid-item {
-    background-color: #ffffff00;
-    border: 10px solid #00000000;
-}
   
+
 
         #draggable-image img {
     width: 137px;
@@ -696,21 +684,21 @@ a.anchorjs-link {
     background-color: #ffffff00;
     border: 2px solid #00000000;
     position: absolute;
-    top: 116PX;
+    top: 167PX;
     left: 179PX;
     z-index: 10000;
     overflow: hidden;
     pointer-events: none;
 }
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 80px);
-    grid-template-rows: repeat(5, 81px);
+    display: grid
+;
+    grid-template-columns: repeat(5, 81px);
+    grid-template-rows: repeat(5, 79px);
     gap: 12px;
     height: 100%;
     width: 100%;
 }
-
 .grid-item {
     background-color: #ffffff00;
     border: 13px solid #00000000;
@@ -948,7 +936,7 @@ function stopScroll() {
                     const gridItems = document.querySelectorAll('.grid-item');
                     gridItems.forEach(item => item.innerHTML = '');
                 }
-            }, 70400);
+            }, 7000);
         }, 5000);
     }
 
