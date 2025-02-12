@@ -62,6 +62,25 @@
     font-family: 'M PLUS 1 Code', monospace;
     margin-top: 10px;
 }
+ /* Garantindo que o fundo da página e do canvas sejam pretos */
+ body, html {
+      margin: 0;
+      padding: 0;
+
+      color: white;
+    }
+
+    /* Ajustando o canvas para ocupar toda a tela */
+    #matrix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; /* Garante que o canvas fique atrás do conteúdo */
+    }
+
+    h1 {
+      display: none;
+    }
 #hack-feedback {
     font-size: 14px;
     text-align: center;
@@ -137,13 +156,7 @@
             color: #00ff3d;
             margin-top: 20px;
         }
-        html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; 
-        overflow-y: auto; 
-        height: 100%; 
-    }
+
     .login-wrapper {
     display: flex
 ;
@@ -152,7 +165,6 @@
     height: auto;
     width: 101vw;
     position: fixed;
-    top: 522px;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -164,6 +176,21 @@
     background-color: rgba(0, 0, 0, 0);
     border-radius: 23px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+}
+#animated-image {
+    animation: pulse 1.5s infinite;
+    filter: brightness(50%); /* Deixa a imagem 50% mais escura */
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
         .login-intro-img {
             max-width: 100%;
@@ -211,7 +238,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary1 {
             background-color: #000000;
             border: 2px solid #ff0000;
@@ -224,8 +251,8 @@
             position: relative;
             overflow: hidden;
         }
-        
-        
+
+
         .btn-primary1::before {
             content: '';
             position: absolute;
@@ -248,14 +275,14 @@
             transform: rotate(45deg);
             transition: all 0.5s ease;
         }
-        
+
         .btn-primary1:hover::before {
             top: 0;
         }
         .btn-primary2:hover::before {
             top: 0;
         }
-        
+
         .btn-primary1:hover {
             background-color: #ff000000;
             color: #000;
@@ -352,19 +379,32 @@
         border: none; 
     }
 
-  
+
         #draggable-image img {
+   
     width: 137px;
     top: 24px;
     left: 36px;
     height: auto;
     position: fixed;
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o tamanho da imagem */
+    }
+    100% {
+        transform: scale(1);
+    }
 }
         .black-background {
             display: none;
         }
-        
-      
+
+
 .loading-hidden {
     display: none; 
 }
@@ -455,7 +495,7 @@ a.anchorjs-link {
     left: -9%;
     width: 122%;
     height: 5px;
-    background-color: green;
+    background-color: rgb(255, 0, 0);
     animation: moveUpDown 2s ease-in-out infinite;
 }
 /* Animação para o movimento do risco (subindo e descendo) */
@@ -560,18 +600,13 @@ a.anchorjs-link {
     </style>
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay="" loop="" muted="">
-          <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
-          
-        </video>
-      </div>
-      
+    <canvas id="matrix"></canvas>
     <div class="login-wrapper d-flex align-items-center justify-content-center" id="login-wrapper">
         <div class="custom-container">
             <div class="text-center px-4">
             
-                
+              <img id="animated-image" src="https://i.ibb.co/5hHdCFHM/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Minha Imagem" class="img-fluid my-4" />
+           
           
             <div class="register-form mt-4">
                 <p class="text-center mb-4">Digite sua senha e clique na Plataforma que deseja</p>
@@ -585,13 +620,14 @@ a.anchorjs-link {
                     </div>
                     <div class="row">
                         <div class="col">
-                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze.bet.br/pt/games/mines')" style="height: 60px;">
+                           
+                            <button class="btn btn-primary1 w-100" type="button" onclick="login('https://blaze.bet.br/pt/games/double')" style="height: 60px;">
                                 <img src="https://blaze1.space/static/media/logo.cf45d2ad.svg" alt="Logo" class="icon-small">
                                 
                             </button>
                         </div>
                 <div class="col">
-                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.bet.br/pt/games/mines')" style="height: 60px;">
+                 <button class="btn btn-primary2 w-100" type="button" onclick="login('https://jonbet.bet.br/pt/games/double')" style="height: 60px;">
                          <img src="https://jon.bet/static/media/logo.3af9f796.svg" alt="Logo" class="large-icon">
                           
                         </button>
@@ -612,7 +648,7 @@ a.anchorjs-link {
 <img src="https://i.ibb.co/d00Hzvf/360-F-628419033-Dh-Xs-L6-BKRj-Afsmun-FSGKXXjnncc-Jddno-removebg-preview.png" alt="Hacker"></div>
 <div class="context-options" id="contextOptions">
     <video autoplay muted loop class="background-video" playsinline>
-        <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4" type="video/mp4">
+        <source src="https://hackerdominesalife00.netlify.app/media/3585079191-preview.mp4_1728018529513-_uhUTxz9.mp4">
         Seu navegador não suporta a reprodução de vídeos.
     </video>
     <span class="bot-title"><i class="fas fa-user-secret"></i> Hacker Marquez [2.0]</span>
@@ -669,7 +705,67 @@ a.anchorjs-link {
         
 </div>                 
     <script>
-        
+// Pegando o elemento do Canvas 
+const c = document.getElementById("matrix");
+
+// Definindo o seu contexto
+const ctx = c.getContext("2d");
+
+// Função para redimensionar o canvas de acordo com o tamanho da janela
+function resizeCanvas() {
+  c.height = window.innerHeight;
+  c.width = window.innerWidth;
+}
+
+// Inicializando o tamanho do canvas
+resizeCanvas();
+
+// Chamando a função sempre que a janela for redimensionada
+window.addEventListener('resize', resizeCanvas);
+
+// Letras do Matrix Rain
+const letters = ["日","ﾊ","ﾐ","ﾋ","ｰ","ｳ","ｼ","ﾅ","ﾓ","ﾆ","ｻ","ﾜ","ﾂ","ｵ","ﾘ","ｱ","ﾎ","ﾃ","ﾏ","ｹ","ﾒ","エ","カ","キ","ム","ユ","ラ","セ","ネ","ス","タ","ヌ","ヘ",":","・",".","=","*","+","-","<",">","¦","｜","ﾘ"];
+
+const fontSize = 18;
+
+// Definindo quantas colunas serão necessárias pelo tamanho da tela e fonte
+const columns = c.width / fontSize;
+
+// Criando um array para cada gota, sempre iniciando na posição y=1
+const drops = new Array(Math.floor(columns)).fill(1);
+
+function draw() {
+  // Preenchendo a tela toda de preto com opacidade
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+  ctx.fillRect(0, 0, c.width, c.height);
+
+  // Definindo a cor e estilo da fonte
+  ctx.fillStyle = "#00FF00"; // Cor verde
+  ctx.font = `${fontSize}px arial`;
+
+  for (let i = 0; i < drops.length; i++) {
+    // Pegando uma letra randomicamente no nosso array
+    const text = letters[Math.floor(Math.random() * letters.length)];
+
+    // Escrevendo na tela
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+    // Resetando a posição da gota ao chegar no fim
+    if (drops[i] * fontSize > c.height && Math.random() > 0.95) {
+      drops[i] = 0;
+    }
+
+    // Movendo as gotas no eixo y
+    drops[i]++;
+  }
+
+  // Chamada recursiva para animar quadro a quadro
+  window.requestAnimationFrame(draw);
+}
+
+// Chamando a função criada
+draw();
+
     // Adiciona suporte para toque duplo em dispositivos móveis
     let lastTouchTime = 0;
     document.addEventListener('touchstart', (event) => {
@@ -720,8 +816,8 @@ function toggleModoAutomatico() {
 }
 function iniciarModoAutomatico() {
     let urls = [
-        'https://blaze.bet.br/pt/games/double',
-        'https://blaze.bet.br/pt/games/mines'
+        'https://jonbet.bet.br/pt/games/double',
+        'https://jonbet.bet.br/pt/games/mines'
     ];
     let indiceUrl = 0;
     intervaloMudarIframe = setInterval(() => {
@@ -787,7 +883,7 @@ function closeContextOptions() {
             if (contextOptions) {
                 const existingAssertividade = contextOptions.querySelector('.assertividade');
                 const existingImage = contextOptions.querySelector('.random-image');
-                
+
                 if (existingAssertividade) contextOptions.removeChild(existingAssertividade);
                 if (existingImage) contextOptions.removeChild(existingImage);
                 // Gera assertividade entre 90% e 100%
@@ -842,7 +938,7 @@ function toggleContextOptions() {
         }
         var image1Url = 'https://i.ibb.co/mtkmH1g/Captura-de-tela-2024-07-24-181926.png';
         var image2Url = 'https://i.ibb.co/PCB9HhV/Captura-de-tela-2024-07-24-181711.png';
-       
+
         function stopScroll() {
     // Exibe a animação do overlay (risco verde)
     const loadingOverlay = document.getElementById('loading-overlay');
@@ -919,4 +1015,3 @@ const assertividade = `${assertividadeValue}%`;
 }
 
     </script>
-
